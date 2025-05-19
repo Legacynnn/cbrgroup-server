@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model FurnitureImage {
+  id          String    @id @default(uuid())
+  url         String
+  position    Int       @default(0)
+  furniture   Furniture @relation(fields: [furnitureId], references: [id], onDelete: Cascade)
+  furnitureId String
+
+  @@index([furnitureId])
+}
+
+model Furniture {
+  id         String             @id @default(uuid())
+  name       String
+  size       String
+  inStock    Boolean            @default(true)
+  category   String
+  createdAt  DateTime           @default(now())
+  updatedAt  DateTime           @updatedAt
+  variations FurnitureVariation[]
+  images     FurnitureImage[]   
+}
+
+model FurnitureVariation {
+  id        String   @id @default(uuid())
+  color     String
+  colorCode String
+  imageUrl  String
+  inStock   Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  furniture   Furniture @relation(fields: [furnitureId], references: [id], onDelete: Cascade)
+  furnitureId String
+}
