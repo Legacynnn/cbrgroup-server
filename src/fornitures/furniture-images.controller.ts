@@ -41,7 +41,6 @@ export class FurnitureImagesController {
         files: 10, // Máximo 10 arquivos
       },
       fileFilter: (req, file, callback) => {
-        // Aceita apenas imagens
         if (!file.mimetype.match(/\/(jpg|jpeg|png|webp)$/)) {
           return callback(new Error('Apenas imagens são permitidas!'), false);
         }
@@ -60,25 +59,20 @@ export class FurnitureImagesController {
     files: Express.Multer.File[],
   ) {
     try {
-      // Primeiro verifica se o furniture existe
       await this.furnitureService.findOne(furnitureId);
 
-      // Processa as imagens carregadas
-      const baseUrl = process.env.API_URL || 'http://localhost:3333';
+      const baseUrl = process.env.API_URL
       
-      // Recebe o último índice das imagens existentes
       const existingFurniture = await this.furnitureService.findOne(furnitureId);
       const lastPosition = existingFurniture.images.length > 0 
         ? Math.max(...existingFurniture.images.map(img => img.position)) 
         : -1;
       
-      // Cria objetos de imagem para cada arquivo
       const images = files.map((file, index) => ({
         url: `${baseUrl}/uploads/${file.filename}`,
-        position: lastPosition + 1 + index // Continua a partir da última posição
+        position: lastPosition + 1 + index
       }));
       
-      // Salva as imagens no banco
       return this.furnitureService.addImages(furnitureId, images);
     } catch (error) {
       console.error('Error uploading images:', error);
