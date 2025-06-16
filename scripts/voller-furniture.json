@@ -1,0 +1,3258 @@
+[
+  {
+    "name": "Banco Acqua",
+    "size": null,
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16200018032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17080306072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17075406072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17074206072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17073406072020_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17072506072020_1_.jpg",
+        "position": 5
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17071606072020_1_.jpg",
+        "position": 6
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17070706072020_1_.jpg",
+        "position": 7
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17065506072020_1_.jpg",
+        "position": 8
+      }
+    ]
+  },
+  {
+    "name": "Aparador Fall",
+    "size": "APA25001 - 2400 x 450 x 800mm",
+    "inStock": false,
+    "category": "downtime",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09350409012025_1_.png",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Banco Aruana",
+    "size": "2200 x 550 x 430mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09482312042024_1_.jpeg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09483612042024_1_.jpeg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09484812042024_1_.jpeg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Aparador Prize",
+    "size": "APA23001 - 2500 x 550 x 750mm",
+    "inStock": false,
+    "category": "downtime",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09281609012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11060205022024_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Banco Bausch",
+    "size": "2400 x 450 x 430mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16222218032024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16230818032024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16224418032024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16223418032024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16225618032024_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Banco Boucle",
+    "size": null,
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria19160118032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16540406072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria19115218032024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria19122918032024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16534406072020_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Banco Doop",
+    "size": null,
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16210818032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17034506072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17033206072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17032106072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08541320102020_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Banco Serpa",
+    "size": null,
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria19022718032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16482706072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16480406072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16474606072020_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Banco Visage",
+    "size": "520 x 400 x 430mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16584806072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16583106072020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Banco Izy",
+    "size": "2700 x 430 x 430mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria19213718032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria19215118032024_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Banco Zoe",
+    "size": "2400 x 480 x 430mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16570006072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16564606072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16562906072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16561806072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16560806072020_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16555506072020_1_.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Bar Laguna",
+    "size": "BAR25001 - 1150 x 550 x 1120mm",
+    "inStock": false,
+    "category": "bars",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09452109012025_1_.png",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Bar Plumb",
+    "size": "1050 x 500 x 1200mm",
+    "inStock": false,
+    "category": "bars",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09283915042024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09282115042024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09290515042024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Bar Vegas",
+    "size": "BAR25002 - 1200 x 490 x 1000mm",
+    "inStock": false,
+    "category": "bars",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14551029012025_1_.png",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Bar Windsor",
+    "size": "BAR25003 - 1100 x 470 x 1000mm",
+    "inStock": false,
+    "category": "bars",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14561129012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14562729012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Buffet Bulgary",
+    "size": "BUF22001 - 2400 x 450 x 750mm",
+    "inStock": false,
+    "category": "Buffets",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11555828052024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16370228052024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10401929052024_1_.png",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10335629052024_1_.png",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Buffet Daller",
+    "size": "BUF25001 - 2400 x 480 x 750mm",
+    "inStock": false,
+    "category": "Buffets",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10384317012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10401917012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10405117012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Buffet Dixie",
+    "size": "BUF20022 - 2400 x 500 x 750mm",
+    "inStock": false,
+    "category": "Buffets",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13483206022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13475206022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13490406022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13501806022024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Buffet Douro",
+    "size": "BUF24060 - 2400 x 470 x 750mm",
+    "inStock": false,
+    "category": "Buffets",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10415817012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10422617012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10424917012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Buffet Drive",
+    "size": "BUF22011 - 2400 x 480 x 750mm",
+    "inStock": false,
+    "category": "Buffets",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14190329012025_1_.jpeg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14184029012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14172729012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Buffet Jack",
+    "size": "BUF19019 - 2200 x 500 x 750mm (4 portas)",
+    "inStock": false,
+    "category": "Buffets",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16074406072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16085106072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16083906072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16081906072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16071106072020_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16065306072020_1_.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Buffet Maxx",
+    "size": "BUF23060 - 2400 x 450 x 730mm",
+    "inStock": false,
+    "category": "Buffets",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16352527032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11385227032024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14181727032024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Buffet Plumb",
+    "size": "BUF24010 - 2400 x 450 x 750mm",
+    "inStock": false,
+    "category": "Buffets",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15164210042024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13371220032024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15315610042024_1_.png",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15334010042024_1_.png",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Buffet Ryo",
+    "size": "BUF20001 - 2400 x 500 x 750mm",
+    "inStock": false,
+    "category": "Buffets",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14202206022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14191506022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14195106022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14210806022024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Buffet Top",
+    "size": "BUF16005 - 2400 x 500 x 750mm",
+    "inStock": false,
+    "category": "Buffets",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16175906072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16174306072020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Aproximação Nest",
+    "size": "CAD24020 - 620 x 620 x 800mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11402720032024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11410020032024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11414520032024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Cadeira Dersa",
+    "size": "CAD23030 - 590 x 590 x 840mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14443606022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14445706022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14453006022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11300219032024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11270019032024_1_.png",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Cadeira Dunn",
+    "size": "CAD24010 - 540 x 620 x 800mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11453320032024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11454720032024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11464120032024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11460120032024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Cadeira Larc",
+    "size": "CAD20001 - 500 x 550 x 810mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14500806022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14505006022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14512006022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14515006022024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14521606022024_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Cadeira Pallin",
+    "size": "CAD23010 - 530 x 570 x 830mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11124214032024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11181914032024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11131614032024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11125914032024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Cadeira Pettit",
+    "size": "CAD23020 - 600 x 500 x 800mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11261820032024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11263820032024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11270020032024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11273020032024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11282820032024_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11292020032024_1_.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Aruana",
+    "size": "POL25001 - 720 x 725 x 650mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11194117012025_1_.png",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Avant",
+    "size": "POL25004 - 790 x 810 x 645mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11214317012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13364317012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13350317012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Blowed",
+    "size": "POL25006 - 1020 x 860 x 710mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15223629012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15230829012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15241129012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Caiobá",
+    "size": "POL20006 - 630 x 630 x 830mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14542706022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14545906022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14554006022024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Calín",
+    "size": null,
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11142819032024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11151419032024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11160919032024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11165719032024_1_.png",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11180319032024_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Poltrona City Blue",
+    "size": null,
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10123529062020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10122429062020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09113320102020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Crabb",
+    "size": "POL23070 - 850 x 750 x 770mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14495508022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14552308022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14541208022024_1_.jpeg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14543808022024_1_.jpeg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Finlandesa",
+    "size": "POL23060 - 780 x 880 x 720mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14564808022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15115908022024_1_.jpeg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15055108022024_1_.jpeg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15125608022024_1_.jpeg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Escrivaninha Brasiliana",
+    "size": "1650 x 550 x 825mm",
+    "inStock": false,
+    "category": "desk",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11160025042024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11341425042024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11360725042024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11380925042024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Crabb - 2 lugares",
+    "size": "POL25007 - 1440 x 750 x 770mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13474517012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13504317012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Puff Finlandesa",
+    "size": "620 x 600 x 450mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11100319032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11090319032024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15543219032024_1_.png",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15550419032024_1_.png",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11103419032024_1_.png",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15574319032024_1_.png",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Poltrona La Basque",
+    "size": "660 x 660 x 790mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15373010042024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15381710042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15384210042024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15164708022024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15185608022024_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15182008022024_1_.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Escrivaninha Lander",
+    "size": "ESC22010 - 2000 x 500 x 800mm",
+    "inStock": false,
+    "category": "desk",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13014624042024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13020324042024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13023024042024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Escrivaninha Liss",
+    "size": "2000 x 510 x 820mm",
+    "inStock": false,
+    "category": "desk",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15325629012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15354729012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15343829012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Leblon",
+    "size": "POL22001 - 770 x 740 x 770mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15294608022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15300408022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15303708022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15323308022024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Escrivaninha São Basilio",
+    "size": "ESC19010 - 1900 x 550 x 770mm",
+    "inStock": false,
+    "category": "desk",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09524517042024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17214108022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17181108022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17230308022024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Mesbla",
+    "size": "POL25002 - 980 x 840 x 740mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14002417012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14005417012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Morena",
+    "size": "POL25003 - 800 x 800 x 640mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14032017012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14034517012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Soto",
+    "size": "590 x 780 x 640mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10524929062020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10523129062020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Sting",
+    "size": "POL24010 - 950 x 780 x 750mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14322505072024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11482620032024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11484620032024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15405910042024_1_.png",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Poltrona Tent",
+    "size": "POL25005 - 800 x 850 x 820mm",
+    "inStock": false,
+    "category": "Cadeiras e Poltronas",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14083417012025_1_.png",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Espelho Linen",
+    "size": "ESP16005 - 1100 x 100 x 2000mm",
+    "inStock": false,
+    "category": "`mirrors`",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15410006072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15404006072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15331806072020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Estante Brick",
+    "size": "EST25001 - 2500 x 1690 x 400mm",
+    "inStock": false,
+    "category": "drawers",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14352017012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15390929012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14363417012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Estante Goya",
+    "size": "EST25002 - 2100 x 340 x 1600mm",
+    "inStock": false,
+    "category": "drawers",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14402717012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14401417012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14404317012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Estante Prize",
+    "size": "EST23001 - 2000 x 450 x 2000mm",
+    "inStock": false,
+    "category": "drawers",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09363722032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09495222032024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10241622032024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Gaveteiro Kiss (2 gavetas)",
+    "size": "GAV20001 - 750 x 450 x 390mm",
+    "inStock": false,
+    "category": "drawers",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15593120032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15595820032024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16341520032024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Gaveteiro Kiss (4 gavetas)",
+    "size": "GAV20002 - 300 x 435 x 830mm",
+    "inStock": false,
+    "category": "drawers",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16565220032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17361921032024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17373821032024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Luminária Avell",
+    "size": "270 x 120 x 350mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10244513082020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10251113082020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10241813082020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10234113082020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15514824062020_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12184106072020_1_.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Luminária Grega",
+    "size": "360 x 360 x 300mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15421629012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12323806072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12321806072020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Luminária K2",
+    "size": "100 x 100 x 250mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10434213082020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10435213082020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10440213082020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10441013082020_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Luminária Mars",
+    "size": "350 x 350 x 300mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria19234618032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09004220102020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17133621072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17134821072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17135921072020_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17140921072020_1_.jpg",
+        "position": 5
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17131721072020_1_.jpg",
+        "position": 6
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17132621072020_1_.jpg",
+        "position": 7
+      }
+    ]
+  },
+  {
+    "name": "Luminária Sly",
+    "size": "80 x 80 x 120mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10581313082020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10582313082020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12125406072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12124306072020_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Luminária Vessie",
+    "size": "200 x 200 x 250mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10525113082020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10520613082020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Luminária Wey",
+    "size": "400 x 400 x 385mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16512821072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16490821072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16485921072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16485021072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12244006072020_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Luminária XXO",
+    "size": "250 x 250 x 200mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12151206072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12150106072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12144806072020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Luminária de Chão AT 22",
+    "size": "LUM18010 - 500 x 320 x 1800mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12080506072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12075206072020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Luminária Suspensa Bovary",
+    "size": "500 x 500 x 40mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12261606072020_1_.jpg",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Luminária Suspensa Joy",
+    "size": "900 x 200 x 100mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12050806072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12045606072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12044106072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12042106072020_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Luminária Suspensa Venon",
+    "size": "600 x 170 x 500mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12015406072020_1_.jpg",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Luminária Suspensa Vernaut",
+    "size": "30 x 30 x 385mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12224006072020_1_.jpg",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Luminária Suspensa Wash",
+    "size": "220 x 220 x 345mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12284406072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12283206072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12281506072020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Fruteira Galla",
+    "size": "LO18012 - 645 x 360 x 60mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09562714072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16050814072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10140814072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09505414072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11124629062020_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11123729062020_1_.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Objeto Clap",
+    "size": "LO20002 - 535 x 400 x 50mm",
+    "inStock": false,
+    "category": "luminaires",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10194028032024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10192928032024_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mancebo Bells",
+    "size": "MAN23030 - 620 x 620 x 1270mm",
+    "inStock": false,
+    "category": "valet",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08322721022024_1_.jpeg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08331021022024_1_.jpeg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08324721022024_1_.jpeg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mancebo Mabele",
+    "size": "MAN23020 - 620 x 620 x 1270mm",
+    "inStock": false,
+    "category": "valet",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08383721022024_1_.jpeg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08391021022024_1_.jpeg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08385521022024_1_.jpeg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mancebo Penss",
+    "size": "MAN23010 - 370 x 370 x 1700mm",
+    "inStock": false,
+    "category": "valet",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10455625042024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10463425042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10462025042024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mancebo Pinning",
+    "size": "370 x 370 x 1700mm",
+    "inStock": false,
+    "category": "valet",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10434425042024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10441225042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10440125042024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Bee",
+    "size": "1300 X 1220 X 270mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10505109022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10513409022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10511409022024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Cecibon",
+    "size": "1010 X 800 X 270mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11125409022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11131209022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11135409022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11143509022024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Cisa",
+    "size": "1100 x 1100 x 300mm (mesa superior)",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17175003072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16175003072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16172803072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16171303072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16165603072020_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16164003072020_1_.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Coral",
+    "size": "2000 X 800 X 245mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11251309022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11253509022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11255909022024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Donst",
+    "size": "1200 X 1200 X 260mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09333215042024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09335615042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09344215042024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09341815042024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Flirt",
+    "size": "MEC25001 - 1300 x 1300 x 270mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria07561729012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria07562129012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria07562629012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Fuggen",
+    "size": "950 X 950 X 320mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14355412062024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15164212062024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14361912062024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Ganache",
+    "size": "1450 x 1450 x 320mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18192103072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18183403072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18181803072020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Gemini",
+    "size": "1500 X 1100 X 310mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11370809022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11383309022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11392909022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11391409022024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11385509022024_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Germina",
+    "size": "2200 x 600 x 250mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16140203072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16134503072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09074720102020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Grass",
+    "size": "900 X 900 X 260mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16235328012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16240528012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Gripo",
+    "size": "1040 X 991 X 285mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria07403429012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria07404029012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Kew",
+    "size": "1250 x 1230 x 240mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13551809022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13565909022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13562209022024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Lancer",
+    "size": "850 x 910 x 300mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14052109022024_1_.jpeg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14054809022024_1_.jpeg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14053709022024_1_.jpeg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Lamê",
+    "size": "2200 x 700 x 250mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16453529012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16453929012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Leed",
+    "size": "2200 x 700 x 260mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18073003072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18075103072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18065203072020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Leed Complementar",
+    "size": "900 x 900 x 320mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14145809022024_1_.jpg",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Lolita",
+    "size": "1100 x 1100 x 260mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18013503072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18012403072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18010903072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18005103072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18002703072020_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Lolita - 10 anos",
+    "size": "1100 X 1100 X 300mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17091128012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17094928012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17103128012025_1_.png",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17105028012025_1_.png",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Lolita Retangular",
+    "size": "2200 x 540 x 260mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17271703072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17270503072020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Lór",
+    "size": "1300 x 1300 x 320mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17265428012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17274728012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17282228012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Malibu",
+    "size": "1600 X 600 X 265mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14251009022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14271809022024_1_.jpeg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14255109022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14245409022024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14261009022024_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Organ",
+    "size": "1100 X 1100 X 270mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16494622032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14153022032024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14161922032024_1_.png",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14171222032024_1_.png",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14475922032024_1_.png",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14484822032024_1_.png",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Allianz",
+    "size": "2000 x 2000 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14204302072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14202902072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14201402072020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Pardon",
+    "size": "1000 x 1000 x 320mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14370309022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14380209022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14393809022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14360509022024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14334909022024_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Bézi",
+    "size": null,
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11561702072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11560702072020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Tyle",
+    "size": "1200 X 1200 X 285mm (Redonda)",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15011009022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15020209022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15004409022024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11231416052024_1_.png",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11493016052024_1_.png",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Cisa",
+    "size": "1800 x 1800 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10235601072024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10474001072024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11162801072024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Yang",
+    "size": "2400 x 700 x 280mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17294103072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17293203072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17291903072020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Duann Redonda",
+    "size": "1400 X 1400 X 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10264730012025_1_.png",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Centro Toronto",
+    "size": "1300 x 1000 x 260mm",
+    "inStock": false,
+    "category": "center-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08042929012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17344228012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08115429012025_1_.png",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08120729012025_1_.png",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08122829012025_1_.png",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Duann Retangular",
+    "size": "3500 x 1300 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10310030012025_1_.png",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Glow",
+    "size": "MEJ19034 - 2980 x 1200 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11583902072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11582502072020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Gull",
+    "size": "2200 x 1100 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10052715042024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10055815042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10054615042024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Haste",
+    "size": "3500 X 1300 X 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10355730012025_1_.png",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Manzana",
+    "size": "4000 x 1200 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12242402072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12241502072020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Nima",
+    "size": "3500 x 1200 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12221902072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12220802072020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Pipper",
+    "size": "1800 x 1800 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11402422052024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16022005062024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16040405062024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Pipper Retangular",
+    "size": "2400 x 1300 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09424030012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09425130012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Pray",
+    "size": "3500 x 1200 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12184102072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12182402072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12180702072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12171402072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12164802072020_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12162702072020_1_.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Sang",
+    "size": "2400x1300x750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09244826042024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09252326042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12113327032024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12153827032024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12104327032024_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12163727032024_1_.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Scar",
+    "size": "2200 x 1200 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16473202042024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16272102042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16480302042024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Sparks",
+    "size": "2980 x 1200 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12121302072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12115802072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria12113602072020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Tour Retangular",
+    "size": "3500 x 1400 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10531330012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10461630012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10494530012025_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Tour Redonda",
+    "size": "1500 x 1500 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10402130012025_1_.png",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Tulipa",
+    "size": "1500 x 1500 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13324702122024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13331302122024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14355302072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14354302072020_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Mesa de Jantar Oval Air",
+    "size": "2500 x 1200 x 750mm",
+    "inStock": false,
+    "category": "dinner-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14555002072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14554202072020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Barra",
+    "size": "500 x 450 x 560mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08322305122024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08330405122024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria08325105122024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11471902072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11465702072020_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11243802072020_1_.jpg",
+        "position": 5
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11242602072020_1_.jpg",
+        "position": 6
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11240902072020_1_.jpg",
+        "position": 7
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Bourbon",
+    "size": "300 X 300 X 480mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14081729012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14094629012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Buzios",
+    "size": "300 x 300 x 550mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15084321072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15085321072020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15091021072020_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15092721072020_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15081421072020_1_.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15082921072020_1_.jpg",
+        "position": 5
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15074421072020_1_.jpg",
+        "position": 6
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15080221072020_1_.jpg",
+        "position": 7
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10571302072020_1_.jpg",
+        "position": 8
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10565302072020_1_.jpg",
+        "position": 9
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Cipó",
+    "size": "430 x 430 x 560mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15313709022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15323509022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15320509022024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Clamp",
+    "size": "440 x 300 x 540mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15380209022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15361309022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15351209022024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Coney",
+    "size": "300 x 345 x 635mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14165504062024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14191804062024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14181204062024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Cowly",
+    "size": "470 x 470 x 560mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15412709022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15415709022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15423209022024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Didon",
+    "size": "550 x 550 x 580mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11203929062020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11202829062020_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11201629062020_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Donst",
+    "size": "700 x 700 x 480mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15193320052024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15212520052024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15200420052024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Flow",
+    "size": "420 x 350 x 560mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09432515042024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09443115042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09440915042024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09434615042024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Flirt",
+    "size": "700 x 700 x 500mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14151129012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14152629012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Fuggen",
+    "size": "650 x 650 x 580mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10554914032024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10565614032024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10561714032024_1_.png",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10552614032024_1_.png",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Grega",
+    "size": "540 x 540 x 500mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14230329012025_1_.png",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Kew",
+    "size": "MEL20002 - 1800 x  500 x  490mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16274715052024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17504115052024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria16281015052024_1_.png",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09000716052024_1_.png",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Lastro",
+    "size": "500 x 500 x 610mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10480002072020_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10475102072020_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Leed",
+    "size": "900 x 900 x 500mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10023615042024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10012215042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10021815042024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10015815042024_1_.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10010915042024_1_.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Rack Beverly",
+    "size": "2400 x 410 x 510mm",
+    "inStock": false,
+    "category": "Racks",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15262614022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15265114022024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15263714022024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Rack Flap",
+    "size": "2200 x 450 x 500mm",
+    "inStock": false,
+    "category": "Racks",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria17593326052024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria18002726052024_1_.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Lolita - 10 anos",
+    "size": "900 x 900 x 420mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14261729012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14263329012025_1_.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Pulse",
+    "size": "450 x 450 x 500mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14313729012025_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14315429012025_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14320729012025_1_.png",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria14322329012025_1_.png",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Sesta",
+    "size": "800 x 800 x 600mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10431202072020_1_.jpg",
+        "position": 0
+      }
+    ]
+  },
+  {
+    "name": "Rack Gyn",
+    "size": "2500 x 450 x 560mm",
+    "inStock": false,
+    "category": "Racks",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15241714022024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15235914022024_1_.jpeg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15234614022024_1_.jpeg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria15233514022024_1_.jpeg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Trasso",
+    "size": "440 x 440 x 545mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09591515042024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09593115042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09595915042024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Rack Les Cap",
+    "size": "2000 X 450 X 415mm",
+    "inStock": false,
+    "category": "Racks",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10401228032024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10414128032024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10434228032024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10441228032024_1_.jpg",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Torn",
+    "size": "750 x 750 x 560mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria10025015052024_1_.png",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria11465415052024_1_.png",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria13581615052024_1_.png",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Tyle",
+    "size": "900 x 900 x 420mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09480315042024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09474215042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09481215042024_1_.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Mesa Lateral Wax",
+    "size": "330 x 330 x 560mm",
+    "inStock": false,
+    "category": "lateral-table",
+    "images": [
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09552015042024_1_.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09550315042024_1_.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09545015042024_1_.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://voler.com.br/admin/files/produto_galeria/produto_galeria09555115042024_1_.jpg",
+        "position": 3
+      }
+    ]
+  }
+]
