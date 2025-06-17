@@ -21,15 +21,16 @@ model FurnitureImage {
 }
 
 model Furniture {
-  id         String             @id @default(uuid())
-  name       String
-  size       String?
-  inStock    Boolean            @default(true)
-  category   String
-  createdAt  DateTime           @default(now())
-  updatedAt  DateTime           @updatedAt
-  variations FurnitureVariation[]
-  images     FurnitureImage[]   
+  id          String             @id @default(uuid())
+  name        String
+  size        String?
+  description String?
+  inStock     Boolean            @default(true)
+  category    String
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+  variations  FurnitureVariation[]
+  images      FurnitureImage[]   
 }
 
 model FurnitureVariation {

@@ -6,12 +6,13 @@ import {
   Param,
   Delete,
   Put,
+  Patch,
   UseGuards,
   HttpException,
   HttpStatus,
 } from '@nestjs/common';
 import { FurnitureService } from './fornitures.service';
-import { CreateFurnitureDto } from './dto/create-forniture.dto';
+import { CreateFurnitureDto, BulkUpdateStockDto } from './dto/create-forniture.dto';
 import { UpdateFurnitureDto } from './dto/update-forniture.dto';
 import { JwtAuthGuard } from '../auth/auth.guard';
 
@@ -53,6 +54,28 @@ export class FurnitureController {
   @Get()
   findAll() {
     return this.furnitureService.findAll();
+  }
+
+  @Get('categories')
+  findCategories() {
+    return this.furnitureService.findCategories();
+  }
+
+  @Patch('bulk-stock')
+  @UseGuards(JwtAuthGuard)
+  async bulkUpdateStock(@Body() bulkUpdateStockDto: BulkUpdateStockDto) {
+    try {
+      return await this.furnitureService.bulkUpdateStock(
+        bulkUpdateStockDto.furnitureIds,
+        bulkUpdateStockDto.inStock
+      );
+    } catch (error) {
+      console.error('Error bulk updating stock:', error);
+      throw new HttpException(
+        error.message || 'Failed to update furniture stock',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
   }
 
   @Get(':id')

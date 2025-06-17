@@ -13,10 +13,16 @@ export class CreateFurnitureVariationDto {
 export class CreateFurnitureDto {
   name: string;
   size: string;
+  description?: string;
   inStock: boolean;
   category: string;
   variations?: CreateFurnitureVariationDto[];
   images?: FurnitureImageDto[];
   imageUrl?: string;
   updateImageUrl?: boolean;
+}
+
+export class BulkUpdateStockDto {
+  furnitureIds: string[];
+  inStock: boolean;
 }

@@ -43,6 +43,36 @@ export class FurnitureService {
     });
   }
 
+  async findCategories() {
+    const result = await this.prisma.furniture.findMany({
+      select: {
+        category: true,
+      },
+      distinct: ['category'],
+    });
+    
+    return result.map(item => item.category).filter(Boolean);
+  }
+
+  async bulkUpdateStock(furnitureIds: string[], inStock: boolean) {
+    const updatedFurniture = await this.prisma.furniture.updateMany({
+      where: {
+        id: {
+          in: furnitureIds,
+        },
+      },
+      data: {
+        inStock,
+      },
+    });
+
+    return {
+      message: `Successfully updated ${updatedFurniture.count} furniture items`,
+      updatedCount: updatedFurniture.count,
+      inStock,
+    };
+  }
+
   async findOne(id: string) {
     const furniture = await this.prisma.furniture.findUnique({
       where: { id },
