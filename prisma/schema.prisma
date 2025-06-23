@@ -23,8 +23,8 @@ model FurnitureImage {
 model Furniture {
   id          String             @id @default(uuid())
   name        String
-  size        String?
-  description String?
+  size        Json?              // Changed to Json to support both string and array of strings
+  description String?            // Made explicitly optional
   inStock     Boolean            @default(true)
   category    String
   createdAt   DateTime           @default(now())

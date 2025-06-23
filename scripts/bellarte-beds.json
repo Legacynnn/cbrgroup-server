@@ -1,0 +1,536 @@
+[
+  {
+    "name": "Pantalla",
+    "description": "The idea was to bring the screen element, normally used to divide environments, as a finish behind the bed and bedside tables and to integrate everything. The Pantalla bed displays a natural straw with a unique and sophisticated weave. Enhanced by a steel frame, it stands out in the scene for its simplicity, in addition to bringing a natural and welcoming atmosphere of connection with nature.",
+    "size": [
+      "Casal 3,27x 2,09 x 1,35m 22cm 26cm 138 x 188 cm",
+      "Queen 3,47 x 2,19 x 1,35m 22cm 26cm 158 x 198 cm",
+      "Intermediário 3,67 x 2,19 x 1,38m 22cm 26cm 178 x 198 cm",
+      "King 3,82 x 2,24 x 1,38m 22cm 26cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bellarte--309-e580b014-1920w.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/A9_02317-1920w.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/A9_02316-1920w.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Lua",
+    "description": "The Lua bed, conceived by architect Sabrina Barros, is a masterpiece of organic design that harmonizes robustness and femininity in an impeccable symbiosis. Its shape flows naturally, as if molded by the hands of time and sculpted by the breeze, serving as a visual invitation to deep relaxation. The intrinsic lightness of its design transcends mere aesthetics, becoming an authentic promise of serenity.",
+    "size": [
+      "Casal / sem mesa 1,84 x 2,42 x 0,95m 24 cm 38 cm 138 x 188 cm",
+      "Queen / sem mesa 2,04 x 2,52 x 0,95m 24 cm 38 cm 158 x 198 cm",
+      "Intermediário / sem mesa 2,24 x 2,52 x 0,95m 24 cm 38 cm 178 x 198 cm",
+      "King / sem mesa 2,39 x 2,57 x 0,95m 24 cm 38 cm 193 x 203 cm",
+      "Casal / com 1 mesa 2,12 x 2,42 x 0,95m 24 cm 38 cm 138 x 188 cm",
+      "Queen / com 1 mesa 2,32 x 2,52 x 0,95m 24 cm 38 cm 158 x 198 cm",
+      "Intermediário / com 1 mesa 2,52 x 2,52 x 0,95m 24 cm 38 cm 178 x 198 cm",
+      "King / com 1 mesa 2,67 x 2,57 x 0,95m 24 cm 38 cm 193 x 203 cm",
+      "Casal / com 2 mesas 2,39 x 2,42 x 0,95m 24 cm 38 cm 138 x 188 cm",
+      "Queen / com 2 mesa 2,59 x 2,52 x 0,95m 24 cm 38 cm 158 x 198 cm",
+      "Intermediário / com 2 mesas 2,79 x 2,52 x 0,95m 24 cm 38 cm 178 x 198 cm",
+      "King / com 2 mesas 2,94 x 2,57 x 0,95m 24 cm 38 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/DSC_4296-0b91a59d-90c0b16d-1920w.png",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/DSC_4293-2300f4fa-f2e84ef0-1920w.png",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bellarte-Sabrina-36-1920w.png",
+        "position": 2
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bellarte-1920w.png",
+        "position": 3
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bellarte-Sabrina-38-4b75e995-1920w.png",
+        "position": 4
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bell-arte-367-1920w.jpg",
+        "position": 5
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bell-arte-358-1920w.jpg",
+        "position": 6
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bell-arte-354-1920w.jpg",
+        "position": 7
+      }
+    ]
+  },
+  {
+    "name": "  Oslo",
+    "description": "The Oslo bed, a creation by Designer Larissa Diegoli, has as its main characteristic promoting the greatest possible comfort, in a generous space. It invites us to leave behind the stress of the day and surrender to complete relaxation, being our decompression refuge, also creating affective memories like lazy Sunday mornings, transcending its functionality.",
+    "size": [
+      "Casal 1,93 x 2,41 x 1,0m 8,5cm 23cm 138 x 188 cm",
+      "Queen 2,13 x 2,51 x 1,0m 8,5cm 23cm 158 x 198 cm",
+      "Intermediário 2,33 x 2,51 x 1,0m 8,5cm 23cm 178 x 198 cm",
+      "King 2,48 x 2,56 x 1,0m 8,5cm 23cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/DSC_4261-c40a46b9-1920w.png",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/DSC_4270-c2e0e1b5-11d700dc-1920w.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "  Algodão",
+    "description": "The name alludes to something soft and comfortable like cotton fiber, and like the large soft pillows that function as a headboard for this bed. The idea is to sharpen the visual and tactile senses and awaken desire through a cozy and inviting environment.",
+    "size": [
+      "Casal 1,58x 2,21 x 0,8m 12 cm 16 cm 138 x 188 cm",
+      "Queen 1,78x 2,31 x 0,8m 12 cm 16 cm 158 x 198 cm",
+      "Intermediário 1,98 x 2,31 x 0,8m 12 cm 16 cm 178 x 198 cm",
+      "King 2,13 x 2,36 x 0,8m 12 cm 16 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bell-arte-117-7b5f4568-ea8396f2-1920w.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/A9_02355-1920w.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/A9_02353-%281%29-1920w.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "  Posh",
+    "description": "Comfort, coziness and sophistication are words that refer to life, home and family. The well-being and security of our home and those who inhabit it are essential for us to be in harmony. The Posh line was created thinking about these elements, exploring design in its essence, free from excess. In the headboard of the Posh bed, the pillows unite and gently embrace the sides, as a sign of welcome to light sleep and peaceful rest.",
+    "size": [
+      "Casal 1,78 x 2,15 x 1,07m 23 cm 138 x 188 cm",
+      "Queen 1,98 x 2,25 x 1,07m 23 cm 158 x 198 cm",
+      "Intermediário 2,18 x 2,25 x 1,07m 23 cm 178 x 198 cm",
+      "King 2,33 x 2,30 x 1,07m 23 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/ -Posh-2-1920w.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/ -posh-1-1920w.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Blocos",
+    "description": "The Blocos bed was developed from the principle of modular composition. The segments unite to constitute the bed, headboard and extend to support the side tables. Its recessed base elevates the composition, lifting it from the floor and attributing the aspect of floatability. On both sides, bedside tables were added, made of tauari wood, superimposed on the upholstery. This integrated composition, in addition to being symmetrical, presents a harmonic repetition of elements and brings with it the exclusive design of a timeless bed.",
+    "size": [
+      "Casal 1,93 x 2,41 x 1,0m 8,5cm 23cm 138 x 188 cm",
+      "Queen 2,13 x 2,51 x 1,0m 8,5cm 23cm 158 x 198 cm",
+      "Intermediário 2,33 x 2,51 x 1,0m 8,5cm 23cm 178 x 198 cm",
+      "King 2,48 x 2,56 x 1,0m 8,5cm 23cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bell-arte-86-cd811d6b-779fc93f-1920w.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/A9_02323-1920w.jpg",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Nane",
+    "description": "The Nane bed is not just a piece of furniture; it is an experience. Created to be a refuge of affection and comfort, the bed carries in its name a tribute to its designer's mother, architect Andressa Venturini. \"Nane\" is affection from the name to every detail of its creation. And it's no wonder, have you ever thought of a bed where you can literally throw yourself and enjoy? From a moment of relaxation to a beautiful and comforting night's sleep.",
+    "size": [
+      "Casal 2,13 x 2,40 x 0,86m 10cm 16cm 138 x 188 cm",
+      "Queen 2,33 x 2,50 x 0,86m 10cm 16cm 158 x 198 cm",
+      "Intermediário 2,53 x 2,50 x 0,86m 10cm 16cm 178 x 198 cm",
+      "King 2,68 x 2,55 x 0,86m 10cm 16cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Nane---Still-2-1920w.png",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/nane-1920w.png",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bellarte+Andressa-26-1920w.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bellarte+Andressa-19-1920w.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bellarte+Andressa-38-1920w.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Bellarte+Andressa-52-1920w.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Jiva",
+    "description": "With organic format and gently sumptuous, the Jiva bed unites elegance with lots of style to create a contemporary sleeping environment, full of personality. The piece has design signed by Crystian Freiberger, and the model has a higher headboard with upholstered appliqué, a detail designed for more comfort when leaning back. The double topstitching with natural transitions gives a special touch of lightness and sophistication. A perfect union of different materials, such as leather, fabric and fiberglass.",
+    "size": [
+      "Casal 1,58 x 2,18 x 1,21m 26 cm 26 cm 138 x 188 cm",
+      "Queen 1,78 x 2,28 x 1,21m 26 cm 26 cm 158 x 198 cm",
+      "Intermediário 1,98 x 2,28 x 1,21m 26 cm 26 cm 178 x 198 cm",
+      "King 2,13 x 2,33 x 1,21m 26 cm 26 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/01-be9c118e-1920w.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/03-56b1fc8f-1920w.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/02-4fc5041f-1920w.jpg",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "name": "Gica",
+    "description": "Signed by designer Arthur Casas, Gica is a detached, independent and rare bed, originated to surprise the contemporary scene dominated by box beds and built-in cabinetry. The detachable headboard is composed of an innovative plug system – the same used in airplanes, cars and trains – and a precise finish that helps with its long-term maintenance, since the front part can be easily disconnected and its fabric covering removed for washing.",
+    "size": [
+      "Casal 138 x 198 x 100 cm  20cm 138 x 188 cm",
+      "Queen 158 x 208 x 100 cm  20cm 158 x 198 cm",
+      "Intermediário 178 x 208 x 100 cm  20cm 178 x 198 cm",
+      "King 193 x 213 x 100 cm  20cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Nova-still- -Gika---Final-1920w.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/_X7A7602-61ce186a-1920w.jpg",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/_X7A7603-4c43b3c7-1920w.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/_X7A7599-1920w.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/STILL-GICA-02-4f00977d-1920w.png",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Aliseé",
+    "description": "With two cozy back cushions on its headboard, the Aliseé bed offers a soft and comfortable surface for reading moments. The charm of the piece lies in its clean lines, which bring contemporaneity to the environment. The coverings are available in high decoration fabric, leather and mixed version. The piece's design is authored by Studio Bell'Arte.",
+    "size": [
+      "Casal 1,53 x 2,17 x 1,15m 27 cm 32 cm 138 x 188 cm",
+      "Queen 1,73 x 2,27 x 1,15m 27 cm 32 cm 158 x 198 cm",
+      "Intermediário 1,93 x 2,27 x 1,15m 27 cm 32 cm 178 x 198 cm",
+      "King 2,08 x 2,32 x 1,15m 27 cm 32 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Alise%C3%A9_1-1920w.png",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Alise%C3%A9_2-1920w.png",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "name": "Ananda",
+    "description": "The vertical lines worked individually involve the entire headboard of the Ananda bed, forming a striking relief.",
+    "size": [
+      "Casal 1,52 x 2,28 x 1,10m 24 cm 27 cm 138 x 188 cm",
+      "Queen 1,72 x 2,38 x 1,10m 24 cm 27 cm 158 x 198 cm",
+      "Intermediário 1,92 x 2,38 x 1,10m 24 cm 27 cm 178 x 198 cm",
+      "King 2,07 x 2,343 x 1,10m 24 cm 27 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Ananda_2-1920w.png",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Ananda_1-1920w.png",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/03-a15975da-1920w.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/01-7208c786-1920w.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/06-7e23f77f-1920w.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/WeArt_BellArte_Dreams_43-1920w.jpg",
+        "position": 5
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/%C3%81tria_2-1920w.png",
+        "position": 6
+      }
+    ]
+  },
+  {
+    "name": "Átria",
+    "description": "The Átria bed has a modern design, signed by designer Ricardo Barddal.",
+    "size": [
+      "Casal 1,49 x 2,20 x 1,13m 27 cm 32 cm 138 x 188 cm",
+      "Queen 1,69 x 2,30 x 1,13m 27 cm 32 cm 158 x 198 cm",
+      "Intermediário 1,89 x 2,30 x 1,13m 27 cm 32 cm 178 x 198 cm",
+      "King 2,04 x 2,35 x 1,13m 27 cm 32 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/%C3%81tria_1-1920w.png",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/%C3%81tria_2-1920w.png",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/16122019FranciscoRibeiroLojaMossoro259+%C3%81TRIA-5be60601-1920w.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/16122019FranciscoRibeiroLojaMossoro260+%C3%81TRIA-1920w.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/16122019FranciscoRibeiroLojaMossoro266+%C3%81TRIA-1920w.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/16122019FranciscoRibeiroLojaMossoro267+%C3%81TRIA-ef7ddb60-1920w.jpg",
+        "position": 5
+      }
+    ]
+  },
+  {
+    "name": "Deriva",
+    "description": "With coverings available in fabric or natural leather, the Deriva is the ideal bed for any décor style.",
+    "size": [
+      "Casal 1,58 x 2,21 x 1,13m 27 cm 30 cm 138 x 188 cm",
+      "Queen 1,78 x 2,31 x 1,13m 27 cm 30 cm 158 x 198 cm",
+      "Intermediário 1,95 x 2,31 x 1,13m 27 cm 30 cm 178 x 198 cm",
+      "King 2,10 x 2,36 x 1,13m 27 cm 30 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Deriva_1-1920w.png",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Deriva_2-1920w.png",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/13-1920w.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/14-306d2fac-1920w.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/11-4e9a6fd9-1920w.jpg",
+        "position": 4
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/10-0f98fb68-1920w.jpg",
+        "position": 5
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/02-2d4cddbb-1920w.jpg",
+        "position": 6
+      }
+    ]
+  },
+  {
+    "name": "Hadar",
+    "description": "The Hadar bed model is perfect for sleeping, resting, but also for leisure moments, like reading time.",
+    "size": [
+      "Casal 1,85 x 2,12 x 1,11m 27 cm 32 cm 138 x 188 cm",
+      "Queen 2,05 x 2,22 x 1,11m 27 cm 32 cm 158 x 198 cm",
+      "Intermediário 2,25 x 2,22 x 1,11m 27 cm 32 cm 178 x 198 cm",
+      "King 2,40 x 2,27 x 1,11m 27 cm 32 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Cabeceira_Hadar_Roupa_-de_ _Branca_2-1920w.png",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Cabeceira_Hadar_Roupa_-de_ _Branca_1-1920w.png",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/16122019FranciscoRibeiroLojaMossoro143+HADAR-3dc282d3-1920w.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/16122019FranciscoRibeiroLojaMossoro144+HADAR-fde65d71-1920w.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/bellartedreams_belem+%288%29-1920w.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Vidya",
+    "description": "With sophisticated and timeless design, the Vidya bed unites noble materials and lots of technology in its construction process.",
+    "size": [
+      "Casal 2,77 x 2,21 x 1,11m 27 cm 39 cm 138 x 188 cm",
+      "Queen 2,97 x 2,31 x 1,11m 27 cm 39 cm 158 x 198 cm",
+      "Intermediário 3,17 x 2,31 x 1,11m 27 cm 39 cm 178 x 198 cm",
+      "King 3,32 x 2,36 x 1,11m 27 cm 39 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Vidya_2-1920w.png",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Vidya_12-1920w.png",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/WeArt_BellArte_Dreams_31-1920w.jpg",
+        "position": 2
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/WeArt_BellArte_Dreams_57-1920w.jpg",
+        "position": 3
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/WeArt_BellArte_Dreams_77-1920w.jpg",
+        "position": 4
+      }
+    ]
+  },
+  {
+    "name": "Lina",
+    "description": "With simple geometric lines, yet nothing simplistic, the design of the Lina bed lives up to the modern style of which the Italian-Brazilian architect Lina Bo Bardi was one of the exponents. The piece brings in its details the functional simplicity that marked Lina's work: the bed base has a removable cover, as the Italians like, facilitating an eventual change of upholstery. The feet are solid like those that support the span of MASP, a project signed by the architect, and the headboard of thin panels floats, although it is attached to the base with exceptional firmness.",
+    "size": [
+      "Casal 1,70 x 2,00 x 1,05m 25 cm 25 cm 138 x 188 cm",
+      "Queen 1,90 x 2,10 x 1,05m 25 cm 25 cm 158 x 198 cm",
+      "Intermediário 2,10 x 2,10 x 1,05m 25 cm 25 cm 178 x 198 cm",
+      "King 2,25 x 2,15 x 1,05m 25 cm 25 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/ -lina-2-89d2e2b4-1920w.png",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/lina-2-1920w.png",
+        "position": 1
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/ -lina-b3aacb5d-1920w.png",
+        "position": 2
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/Vidya_12-1920w.png",
+        "position": 3
+      }
+    ]
+  },
+  {
+    "name": "Torus",
+    "description": "With a youthful and totally casual feel, the Torus bed is the perfect addition to current and contemporary projects. There are two finishing options: the version with the attached upholstery, more restrained; and the version with slightly loose finish, which presents a more wrinkled and relaxed look. For those who like renewal, different covers are available for the base and headboard – just change them to revitalize the environment.",
+    "size": [
+      "Casal 1,60 x 2,31 x 0,96m 25 cm 30 cm 138 x 188 cm",
+      "Queen 1,80 x 2,41 x 0,96m 25 cm 30 cm 158 x 198 cm",
+      "Intermediário 2,00 x 2,41 x 0,96m 25 cm 30 cm 178 x 198 cm",
+      "King 2,15 x 2,46 x 0,96m 25 cm 30 cm 193 x 203 cm"
+    ],
+    "inStock": false,
+    "category": "Beds",
+    "images": [
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/ -torus-1-1920w.jpg",
+        "position": 0
+      },
+      {
+        "url": "https://lirp.cdn-website.com/d1d6ab03/dms3rep/multi/opt/ -torus-2-1920w.jpg",
+        "position": 1
+      }
+    ]
+  }
+] 

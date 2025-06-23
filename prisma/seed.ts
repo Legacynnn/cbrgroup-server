@@ -6,7 +6,8 @@ const prisma = new PrismaClient();
 
 interface DatabaseFurniture {
   name: string;
-  size: string | null;
+  size: string | string[]; // Updated to support both string and array
+  description?: string;    // Added optional description
   inStock: boolean;
   category: string;
   images: {
@@ -18,7 +19,15 @@ interface DatabaseFurniture {
 async function main() {
   console.log('🚀 Starting furniture data seeding...');
   
-  const jsonPath = path.join(__dirname, '../scripts/voller.json');
+  // Try to read bellarte-beds.json first, fallback to voller.json
+  let jsonPath = path.join(__dirname, '../scripts/bellarte-beds.json');
+  if (!fs.existsSync(jsonPath)) {
+    console.log('📝 bellarte-beds.json not found, falling back to voller.json');
+    jsonPath = path.join(__dirname, '../scripts/voller.json');
+  } else {
+    console.log('📝 Using bellarte-beds.json for seeding');
+  }
+  
   const furnitureData: DatabaseFurniture[] = JSON.parse(
     fs.readFileSync(jsonPath, 'utf-8')
   );
@@ -33,14 +42,15 @@ async function main() {
       await prisma.$transaction(async (tx) => {
         const furniture = await tx.furniture.create({
           data: {
-            name: furnitureItem.name,
-            size: furnitureItem.size || '', // Handle null size
+            name: furnitureItem.name.trim(), // Clean up name
+            size: furnitureItem.size || null, // Store as JSON (string or array)
+            description: furnitureItem.description || null, // Add description
             inStock: furnitureItem.inStock,
             category: furnitureItem.category,
           },
         });
 
-        if (furnitureItem.images.length > 0) {
+        if (furnitureItem.images && furnitureItem.images.length > 0) {
           await tx.furnitureImage.createMany({
             data: furnitureItem.images.map(image => ({
               url: image.url,

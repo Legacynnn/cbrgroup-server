@@ -12,7 +12,7 @@ export class CreateFurnitureVariationDto {
 
 export class CreateFurnitureDto {
   name: string;
-  size: string;
+  size: string | string[];
   description?: string;
   inStock: boolean;
   category: string;
