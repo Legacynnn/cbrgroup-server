@@ -140,7 +140,7 @@ export class FurnitureService {
 
     // Add search functionality
     if (search) {
-      const searchFields = [
+      const searchFields: any[] = [
         {
           name: {
             contains: search,
