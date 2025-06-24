@@ -14,6 +14,7 @@ export class CreateFurnitureDto {
   name: string;
   size: string | string[];
   description?: string;
+  producer?: string;
   inStock: boolean;
   category: string;
   variations?: CreateFurnitureVariationDto[];
@@ -32,8 +33,9 @@ export class PaginationQueryDto {
   limit?: number = 10;
   search?: string;
   category?: string;
+  producer?: string;
   inStock?: boolean;
-  sortBy?: 'name' | 'category' | 'createdAt' | 'updatedAt' = 'createdAt';
+  sortBy?: 'name' | 'category' | 'producer' | 'createdAt' | 'updatedAt' = 'createdAt';
   sortOrder?: 'asc' | 'desc' = 'desc';
 }
 
@@ -50,6 +52,7 @@ export class PaginationResponseDto<T> {
   filters?: {
     search?: string;
     category?: string;
+    producer?: string;
     inStock?: boolean;
     sortBy: string;
     sortOrder: string;

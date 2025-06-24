@@ -9,6 +9,8 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "db:seed": "tsx prisma/seed.ts",
+    "db:update-producers": "tsx scripts/update-producers.ts",
+    "db:update-producers-prod": "node scripts/update-producers.js",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",

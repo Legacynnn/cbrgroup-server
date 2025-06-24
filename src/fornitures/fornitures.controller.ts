@@ -56,7 +56,7 @@ export class FurnitureController {
   @UseGuards(JwtAuthGuard)
   async findAllAdmin(@Query() query: PaginationQueryDto) {
     try {
-      return this.furnitureService.findAllWithPagination(query, false);
+      return this.furnitureService.findAllWithPagination(query, false, true);
     } catch (error) {
       console.error('Error fetching admin furniture:', error);
       throw new HttpException(
@@ -69,7 +69,7 @@ export class FurnitureController {
   @Get('in-stock')
   async findInStock(@Query() query: PaginationQueryDto) {
     try {
-      return this.furnitureService.findAllWithPagination(query, true);
+      return this.furnitureService.findAllWithPagination(query, true, false);
     } catch (error) {
       console.error('Error fetching in-stock furniture:', error);
       throw new HttpException(
@@ -87,6 +87,12 @@ export class FurnitureController {
   @Get('categories')
   findCategories() {
     return this.furnitureService.findCategories();
+  }
+
+  @Get('producers')
+  @UseGuards(JwtAuthGuard)
+  findProducers() {
+    return this.furnitureService.findProducers();
   }
 
   @Patch('bulk-stock')
@@ -110,6 +116,12 @@ export class FurnitureController {
   @UseGuards(JwtAuthGuard)
   remove(@Param('id') id: string) {
     return this.furnitureService.remove(id);
+  }
+
+  @Get(':id/admin')
+  @UseGuards(JwtAuthGuard)
+  findOneAdmin(@Param('id') id: string) {
+    return this.furnitureService.findOneAdmin(id);
   }
 
   @Get(':id')

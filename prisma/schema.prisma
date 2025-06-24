@@ -25,6 +25,7 @@ model Furniture {
   name        String
   size        Json?              // Changed to Json to support both string and array of strings
   description String?            // Made explicitly optional
+  producer    String?            // Producer is optional and only visible to admin
   inStock     Boolean            @default(true)
   category    String
   createdAt   DateTime           @default(now())

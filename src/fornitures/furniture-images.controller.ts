@@ -83,6 +83,50 @@ export class FurnitureImagesController {
     }
   }
 
+  @Post(':furnitureId/url')
+  @UseGuards(JwtAuthGuard)
+  async addImageUrls(
+    @Param('furnitureId') furnitureId: string,
+    @Body() body: { images: Array<{ url: string; position: number }> },
+  ) {
+    try {
+      await this.furnitureService.findOne(furnitureId);
+
+      if (!body.images || !Array.isArray(body.images) || body.images.length === 0) {
+        throw new HttpException('Images array is required', HttpStatus.BAD_REQUEST);
+      }
+
+      for (const image of body.images) {
+        if (!image.url || typeof image.url !== 'string') {
+          throw new HttpException('Valid image URL is required', HttpStatus.BAD_REQUEST);
+        }
+
+        const url = image.url.trim();
+        if (!url.match(/^https?:\/\/.+\.(jpg|jpeg|png|webp|gif)(\?.*)?$/i)) {
+          throw new HttpException('URL must be a valid image URL (jpg, jpeg, png, webp, gif)', HttpStatus.BAD_REQUEST);
+        }
+      }
+
+      const existingFurniture = await this.furnitureService.findOne(furnitureId);
+      const lastPosition = existingFurniture.images.length > 0 
+        ? Math.max(...existingFurniture.images.map(img => img.position)) 
+        : -1;
+
+      const images = body.images.map((image, index) => ({
+        url: image.url.trim(),
+        position: image.position !== undefined ? image.position : lastPosition + 1 + index
+      }));
+
+      return this.furnitureService.addImages(furnitureId, images);
+    } catch (error) {
+      console.error('Error adding image URLs:', error);
+      throw new HttpException(
+        error.message || 'Failed to add image URLs',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
   @Put(':furnitureId/positions')
   @UseGuards(JwtAuthGuard)
   async updatePositions(
@@ -90,10 +134,26 @@ export class FurnitureImagesController {
     @Body() updateData: { images: Array<{ id: string; position: number }> },
   ) {
     try {
-      return this.furnitureService.updateImagePositions(
+      console.log('=== Position Update Request ===');
+      console.log('Furniture ID:', furnitureId);
+      console.log('Update data received:', JSON.stringify(updateData, null, 2));
+      
+      if (!updateData || !updateData.images || !Array.isArray(updateData.images)) {
+        console.log('Invalid update data structure');
+        throw new HttpException('Invalid update data', HttpStatus.BAD_REQUEST);
+      }
+      
+      console.log('Calling updateImagePositions service...');
+      const result = await this.furnitureService.updateImagePositions(
         furnitureId,
         updateData.images,
       );
+      
+      console.log('Position update result:', result ? 'Success' : 'Failed');
+      console.log('Updated furniture images:', result.images?.map((img: any) => ({ id: img.id, position: img.position })));
+      console.log('=== Position Update Complete ===');
+      
+      return result;
     } catch (error) {
       console.error('Error updating image positions:', error);
       throw new HttpException(

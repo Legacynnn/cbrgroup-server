@@ -8,6 +8,7 @@ interface DatabaseFurniture {
   name: string;
   size: string | string[]; // Updated to support both string and array
   description?: string;    // Added optional description
+  producer?: string;       // Added optional producer
   inStock: boolean;
   category: string;
   images: {
@@ -40,11 +41,18 @@ async function main() {
   for (const [index, furnitureItem] of furnitureData.entries()) {
     try {
       await prisma.$transaction(async (tx) => {
+        // Determine producer based on category if not provided
+        const producer = furnitureItem.producer || 
+          (furnitureItem.category.toLowerCase() === 'beds' || furnitureItem.category.toLowerCase() === 'bed' 
+            ? 'bell-arte' 
+            : 'voller');
+
         const furniture = await tx.furniture.create({
           data: {
             name: furnitureItem.name.trim(), // Clean up name
             size: furnitureItem.size || null, // Store as JSON (string or array)
             description: furnitureItem.description || null, // Add description
+            producer: producer, // Add producer
             inStock: furnitureItem.inStock,
             category: furnitureItem.category,
           },
@@ -79,9 +87,22 @@ async function main() {
   const totalFurniture = await prisma.furniture.count();
   const totalImages = await prisma.furnitureImage.count();
   
+  // Show producer distribution
+  const producerSummary = await prisma.furniture.groupBy({
+    by: ['producer'],
+    _count: {
+      producer: true
+    }
+  });
+  
   console.log(`\n📊 Database totals:`);
   console.log(`- Furniture items: ${totalFurniture}`);
   console.log(`- Images: ${totalImages}`);
+  
+  console.log('\n📊 Producer distribution:');
+  producerSummary.forEach(item => {
+    console.log(`- ${item.producer || 'No producer'}: ${item._count.producer} items`);
+  });
 }
 
 main()
