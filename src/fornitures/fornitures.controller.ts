@@ -106,14 +106,14 @@ export class FurnitureController {
     }
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.furnitureService.findOne(id);
-  }
-
   @Delete(':id')
   @UseGuards(JwtAuthGuard)
   remove(@Param('id') id: string) {
     return this.furnitureService.remove(id);
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.furnitureService.findOne(id);
   }
 }
