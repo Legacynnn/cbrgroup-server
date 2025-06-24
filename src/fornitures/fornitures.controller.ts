@@ -10,9 +10,10 @@ import {
   UseGuards,
   HttpException,
   HttpStatus,
+  Query,
 } from '@nestjs/common';
 import { FurnitureService } from './fornitures.service';
-import { CreateFurnitureDto, BulkUpdateStockDto } from './dto/create-forniture.dto';
+import { CreateFurnitureDto, BulkUpdateStockDto, PaginationQueryDto } from './dto/create-forniture.dto';
 import { UpdateFurnitureDto } from './dto/update-forniture.dto';
 import { JwtAuthGuard } from '../auth/auth.guard';
 
@@ -46,6 +47,33 @@ export class FurnitureController {
       console.error('Error updating furniture:', error);
       throw new HttpException(
         error.message || 'Failed to update furniture',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
+  @Get('admin')
+  @UseGuards(JwtAuthGuard)
+  async findAllAdmin(@Query() query: PaginationQueryDto) {
+    try {
+      return this.furnitureService.findAllWithPagination(query, false);
+    } catch (error) {
+      console.error('Error fetching admin furniture:', error);
+      throw new HttpException(
+        error.message || 'Failed to fetch furniture',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
+  @Get('in-stock')
+  async findInStock(@Query() query: PaginationQueryDto) {
+    try {
+      return this.furnitureService.findAllWithPagination(query, true);
+    } catch (error) {
+      console.error('Error fetching in-stock furniture:', error);
+      throw new HttpException(
+        error.message || 'Failed to fetch furniture',
         error.status || HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }

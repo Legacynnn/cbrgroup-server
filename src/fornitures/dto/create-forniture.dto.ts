@@ -26,3 +26,32 @@ export class BulkUpdateStockDto {
   furnitureIds: string[];
   inStock: boolean;
 }
+
+export class PaginationQueryDto {
+  page?: number = 1;
+  limit?: number = 10;
+  search?: string;
+  category?: string;
+  inStock?: boolean;
+  sortBy?: 'name' | 'category' | 'createdAt' | 'updatedAt' = 'createdAt';
+  sortOrder?: 'asc' | 'desc' = 'desc';
+}
+
+export class PaginationResponseDto<T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+    hasNext: boolean;
+    hasPrev: boolean;
+  };
+  filters?: {
+    search?: string;
+    category?: string;
+    inStock?: boolean;
+    sortBy: string;
+    sortOrder: string;
+  };
+}

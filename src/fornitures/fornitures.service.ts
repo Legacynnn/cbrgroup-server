@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
-import { CreateFurnitureDto } from './dto/create-forniture.dto';
+import { CreateFurnitureDto, PaginationQueryDto, PaginationResponseDto } from './dto/create-forniture.dto';
 import { UpdateFurnitureDto } from './dto/update-forniture.dto';
 import { existsSync, unlinkSync } from 'fs';
 import { join } from 'path';
@@ -41,6 +41,128 @@ export class FurnitureService {
         },
       },
     });
+  }
+
+  async findAllWithPagination(
+    query: PaginationQueryDto, 
+    inStockOnly: boolean = false
+  ): Promise<PaginationResponseDto<any>> {
+    const {
+      page = 1,
+      limit = 10,
+      search,
+      category,
+      inStock,
+      sortBy = 'createdAt',
+      sortOrder = 'desc'
+    } = query;
+
+    // Convert page and limit to numbers and validate
+    const pageNum = Math.max(1, Number(page));
+    const limitNum = Math.min(100, Math.max(1, Number(limit))); // Max 100 items per page
+    const skip = (pageNum - 1) * limitNum;
+
+    // Build where clause
+    const where: any = {};
+    
+    // If inStockOnly is true, force filter to in-stock items
+    if (inStockOnly) {
+      where.inStock = true;
+    } else if (inStock !== undefined) {
+      // For admin route, allow filtering by stock status
+      // Handle both boolean and string values from query parameters
+      const inStockValue = typeof inStock === 'string' 
+        ? inStock === 'true' 
+        : Boolean(inStock);
+      where.inStock = inStockValue;
+    }
+
+    // Add category filter
+    if (category) {
+      where.category = {
+        equals: category,
+        mode: 'insensitive'
+      };
+    }
+
+    // Add search functionality
+    if (search) {
+      where.OR = [
+        {
+          name: {
+            contains: search,
+            mode: 'insensitive'
+          }
+        },
+        {
+          description: {
+            contains: search,
+            mode: 'insensitive'
+          }
+        },
+        {
+          category: {
+            contains: search,
+            mode: 'insensitive'
+          }
+        }
+      ];
+    }
+
+    // Build orderBy clause
+    const orderBy: any = {};
+    if (sortBy === 'name' || sortBy === 'category') {
+      orderBy[sortBy] = sortOrder;
+    } else if (sortBy === 'createdAt' || sortBy === 'updatedAt') {
+      orderBy[sortBy] = sortOrder;
+    } else {
+      orderBy.createdAt = 'desc'; // Default sorting
+    }
+
+    try {
+      // Execute queries in parallel
+      const [furniture, total] = await Promise.all([
+        this.prisma.furniture.findMany({
+          where,
+          skip,
+          take: limitNum,
+          orderBy,
+          include: {
+            variations: true,
+            images: {
+              orderBy: {
+                position: 'asc'
+              }
+            },
+          },
+        }),
+        this.prisma.furniture.count({ where })
+      ]);
+
+      const totalPages = Math.ceil(total / limitNum);
+
+      return {
+        data: furniture,
+        pagination: {
+          page: pageNum,
+          limit: limitNum,
+          total,
+          totalPages,
+          hasNext: pageNum < totalPages,
+          hasPrev: pageNum > 1,
+        },
+        filters: {
+          search,
+          category,
+          inStock: inStockOnly ? true : inStock,
+          sortBy,
+          sortOrder
+        }
+      };
+    } catch (error) {
+      console.error('Error in findAllWithPagination:', error);
+      throw new Error('Failed to fetch furniture with pagination');
+    }
   }
 
   async findCategories() {
