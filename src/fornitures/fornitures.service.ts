@@ -4,23 +4,43 @@ import { CreateFurnitureDto, PaginationQueryDto, PaginationResponseDto } from '.
 import { UpdateFurnitureDto } from './dto/update-forniture.dto';
 import { existsSync, unlinkSync } from 'fs';
 import { join } from 'path';
+import { Decimal } from '@prisma/client/runtime/library';
 
 @Injectable()
 export class FurnitureService {
   constructor(private prisma: PrismaService) {}
 
   async create(createFurnitureDto: CreateFurnitureDto) {
-    const { variations, images, imageUrl, updateImageUrl, ...furnitureData } = createFurnitureDto;
+    const { variations, images, imageUrl, updateImageUrl, price, ...furnitureData } = createFurnitureDto;
+    
+    // Verify category exists
+    const category = await this.prisma.category.findUnique({
+      where: { id: createFurnitureDto.categoryId }
+    });
+    
+    if (!category) {
+      throw new NotFoundException(`Category with ID ${createFurnitureDto.categoryId} not found`);
+    }
     
     return this.prisma.$transaction(async (prisma) => {
       const furniture = await prisma.furniture.create({
         data: {
           ...furnitureData,
+          price: price ? new Decimal(price) : null,
           variations: variations && variations.length > 0 ? {
-            create: variations,
+            create: variations.map(variation => ({
+              name: variation.name,
+              textureType: variation.textureType,
+              color: variation.color,
+              colorCode: variation.colorCode,
+              textureImageUrl: variation.textureImageUrl,
+              associatedImageIds: variation.associatedImageIds || [],
+              inStock: variation.inStock,
+            })),
           } : undefined,
         },
         include: {
+          category: true,
           variations: true,
           images: {
             orderBy: {
@@ -30,6 +50,7 @@ export class FurnitureService {
         },
       });
 
+      // Create images if provided
       if (images && images.length > 0) {
         await prisma.furnitureImage.createMany({
           data: images.map(img => ({
@@ -43,6 +64,7 @@ export class FurnitureService {
       return prisma.furniture.findUnique({
         where: { id: furniture.id },
         include: {
+          category: true,
           variations: true,
           images: {
             orderBy: {
@@ -57,6 +79,7 @@ export class FurnitureService {
   async findAll() {
     const furniture = await this.prisma.furniture.findMany({
       include: {
+        category: true,
         variations: true,
         images: {
           orderBy: {
@@ -66,16 +89,20 @@ export class FurnitureService {
       },
     });
 
-    // Remove producer field from public responses
+    // Remove producer field from public responses and format price
     return furniture.map(item => {
       const { producer, ...publicData } = item;
-      return publicData;
+      return {
+        ...publicData,
+        price: item.price ? parseFloat(item.price.toString()) : null,
+      };
     });
   }
 
   async findAllAdmin() {
-    return this.prisma.furniture.findMany({
+    const furniture = await this.prisma.furniture.findMany({
       include: {
+        category: true,
         variations: true,
         images: {
           orderBy: {
@@ -84,6 +111,12 @@ export class FurnitureService {
         },
       },
     });
+
+    // Format price for admin responses
+    return furniture.map(item => ({
+      ...item,
+      price: item.price ? parseFloat(item.price.toString()) : null,
+    }));
   }
 
   async findAllWithPagination(
@@ -95,9 +128,12 @@ export class FurnitureService {
       page = 1,
       limit = 10,
       search,
-      category,
+      categoryId,
       producer,
       inStock,
+      minPrice,
+      maxPrice,
+      textureType,
       sortBy = 'createdAt',
       sortOrder = 'desc'
     } = query;
@@ -123,11 +159,8 @@ export class FurnitureService {
     }
 
     // Add category filter
-    if (category) {
-      where.category = {
-        equals: category,
-        mode: 'insensitive'
-      };
+    if (categoryId) {
+      where.categoryId = categoryId;
     }
 
     // Add producer filter (only for admin)
@@ -135,6 +168,29 @@ export class FurnitureService {
       where.producer = {
         equals: producer,
         mode: 'insensitive'
+      };
+    }
+
+    // Add price range filters
+    if (minPrice !== undefined || maxPrice !== undefined) {
+      where.price = {};
+      if (minPrice !== undefined) {
+        where.price.gte = new Decimal(minPrice);
+      }
+      if (maxPrice !== undefined) {
+        where.price.lte = new Decimal(maxPrice);
+      }
+    }
+
+    // Add texture type filter
+    if (textureType) {
+      where.variations = {
+        some: {
+          textureType: {
+            equals: textureType,
+            mode: 'insensitive'
+          }
+        }
       };
     }
 
@@ -158,6 +214,16 @@ export class FurnitureService {
             contains: search,
             mode: 'insensitive'
           }
+        },
+        {
+          variations: {
+            some: {
+              name: {
+                contains: search,
+                mode: 'insensitive'
+              }
+            }
+          }
         }
       ];
 
@@ -178,6 +244,8 @@ export class FurnitureService {
     const orderBy: any = {};
     if (sortBy === 'name' || sortBy === 'category' || (sortBy === 'producer' && isAdmin)) {
       orderBy[sortBy] = sortOrder;
+    } else if (sortBy === 'price') {
+      orderBy.price = sortOrder;
     } else if (sortBy === 'createdAt' || sortBy === 'updatedAt') {
       orderBy[sortBy] = sortOrder;
     } else {
@@ -193,6 +261,7 @@ export class FurnitureService {
           take: limitNum,
           orderBy,
           include: {
+            category: true,
             variations: true,
             images: {
               orderBy: {
@@ -206,10 +275,16 @@ export class FurnitureService {
 
       const totalPages = Math.ceil(total / limitNum);
 
-      // Remove producer field from public responses
-      const data = isAdmin ? furniture : furniture.map(item => {
+      // Remove producer field from public responses and format price
+      const data = isAdmin ? furniture.map(item => ({
+        ...item,
+        price: item.price ? parseFloat(item.price.toString()) : null,
+      })) : furniture.map(item => {
         const { producer, ...publicData } = item;
-        return publicData;
+        return {
+          ...publicData,
+          price: item.price ? parseFloat(item.price.toString()) : null,
+        };
       });
 
       return {
@@ -224,9 +299,12 @@ export class FurnitureService {
         },
         filters: {
           search,
-          category,
+          categoryId,
           producer: isAdmin ? producer : undefined,
           inStock: inStockOnly ? true : inStock,
+          minPrice,
+          maxPrice,
+          textureType,
           sortBy,
           sortOrder
         }
@@ -238,14 +316,62 @@ export class FurnitureService {
   }
 
   async findCategories() {
-    const result = await this.prisma.furniture.findMany({
-      select: {
-        category: true,
+    const result = await this.prisma.category.findMany({
+      where: {
+        furniture: {
+          some: {
+            inStock: true,
+          }
+        }
       },
-      distinct: ['category'],
+      select: {
+        id: true,
+        name: true,
+        imageUrl: true,
+      },
+      orderBy: {
+        name: 'asc'
+      }
     });
     
-    return result.map(item => item.category).filter(Boolean);
+    return result;
+  }
+
+  async findByCategory(categoryId: string) {
+    const category = await this.prisma.category.findUnique({
+      where: { id: categoryId }
+    });
+
+    if (!category) {
+      throw new NotFoundException(`Category with ID ${categoryId} not found`);
+    }
+
+    const furniture = await this.prisma.furniture.findMany({
+      where: {
+        categoryId: categoryId,
+        inStock: true,
+      },
+      include: {
+        category: true,
+        variations: true,
+        images: {
+          orderBy: {
+            position: 'asc'
+          }
+        },
+      },
+      orderBy: {
+        name: 'asc'
+      }
+    });
+
+    return furniture.map(item => {
+      const { producer, ...publicData } = item;
+      return {
+        ...publicData,
+        price: item.price ? parseFloat(item.price.toString()) : null,
+      };
+    });
   }
 
   async findProducers() {
@@ -257,6 +383,17 @@ export class FurnitureService {
     });
     
     return result.map(item => item.producer).filter(Boolean);
+  }
+
+  async findTextureTypes() {
+    const result = await this.prisma.furnitureVariation.findMany({
+      select: {
+        textureType: true,
+      },
+      distinct: ['textureType'],
+    });
+    
+    return result.map(item => item.textureType).filter(Boolean);
   }
 
   async bulkUpdateStock(furnitureIds: string[], inStock: boolean) {
@@ -282,6 +419,7 @@ export class FurnitureService {
     const furniture = await this.prisma.furniture.findUnique({
       where: { id },
       include: {
+        category: true,
         variations: true,
         images: {
           orderBy: {
@@ -295,15 +433,19 @@ export class FurnitureService {
       throw new NotFoundException(`Furniture with ID ${id} not found`);
     }
 
-    // Remove producer field from public responses
+    // Remove producer field from public responses and format price
     const { producer, ...publicData } = furniture;
-    return publicData;
+    return {
+      ...publicData,
+      price: furniture.price ? parseFloat(furniture.price.toString()) : null,
+    };
   }
 
   async findOneAdmin(id: string) {
     const furniture = await this.prisma.furniture.findUnique({
       where: { id },
       include: {
+        category: true,
         variations: true,
         images: {
           orderBy: {
@@ -317,25 +459,26 @@ export class FurnitureService {
       throw new NotFoundException(`Furniture with ID ${id} not found`);
     }
 
-    return furniture;
+    return {
+      ...furniture,
+      price: furniture.price ? parseFloat(furniture.price.toString()) : null,
+    };
   }
 
   async update(id: string, updateFurnitureDto: UpdateFurnitureDto) {
     await this.findOneAdmin(id);
     
-    const { variations, images, imageUrl, updateImageUrl, ...furnitureData } = updateFurnitureDto;
+    const { variations, images, imageUrl, updateImageUrl, price, ...furnitureData } = updateFurnitureDto;
     
     return this.prisma.$transaction(async (prisma) => {
       const updatedFurniture = await prisma.furniture.update({
         where: { id },
         data: {
           ...furnitureData,
-          variations: variations && variations.length > 0 ? {
-            deleteMany: {},
-            create: variations,
-          } : undefined,
+          price: price !== undefined ? (price ? new Decimal(price) : null) : undefined,
         },
         include: {
+          category: true,
           variations: true,
           images: {
             orderBy: {
@@ -345,6 +488,28 @@ export class FurnitureService {
         },
       });
 
+      // Handle variations update (now comes from the main DTO since variations are now part of CreateFurnitureDto)
+      if (updateFurnitureDto.variations && updateFurnitureDto.variations.length > 0) {
+        // Replace all variations with new ones
+        await prisma.furnitureVariation.deleteMany({
+          where: { furnitureId: id },
+        });
+
+        await prisma.furnitureVariation.createMany({
+          data: updateFurnitureDto.variations.map(variation => ({
+            name: variation.name,
+            textureType: variation.textureType,
+            color: variation.color,
+            colorCode: variation.colorCode,
+            textureImageUrl: variation.textureImageUrl,
+            associatedImageIds: variation.associatedImageIds || [],
+            inStock: variation.inStock ?? true,
+            furnitureId: id,
+          })),
+        });
+      }
+
+      // Handle images update (existing logic)
       if (images && images.length > 0) {
         const existingImages = await prisma.furnitureImage.findMany({
           where: { furnitureId: id },
@@ -393,9 +558,10 @@ export class FurnitureService {
         }
       }
 
-      return prisma.furniture.findUnique({
+      const result = await prisma.furniture.findUnique({
         where: { id },
         include: {
+          category: true,
           variations: true,
           images: {
             orderBy: {
@@ -404,6 +570,11 @@ export class FurnitureService {
           },
         },
       });
+
+      return {
+        ...result,
+        price: result?.price ? parseFloat(result.price.toString()) : null,
+      };
     });
   }
 
@@ -555,4 +726,4 @@ export class FurnitureService {
       where: { id },
     });
   }
-}
+} 

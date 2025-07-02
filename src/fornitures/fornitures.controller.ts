@@ -89,10 +89,28 @@ export class FurnitureController {
     return this.furnitureService.findCategories();
   }
 
+  @Get('category/:categoryId')
+  async findByCategory(@Param('categoryId') categoryId: string) {
+    try {
+      return this.furnitureService.findByCategory(categoryId);
+    } catch (error) {
+      console.error('Error fetching furniture by category:', error);
+      throw new HttpException(
+        error.message || 'Failed to fetch furniture by category',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
   @Get('producers')
   @UseGuards(JwtAuthGuard)
   findProducers() {
     return this.furnitureService.findProducers();
+  }
+
+  @Get('texture-types')
+  findTextureTypes() {
+    return this.furnitureService.findTextureTypes();
   }
 
   @Patch('bulk-stock')

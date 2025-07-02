@@ -10,6 +10,30 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Category {
+  id        String      @id @default(uuid())
+  name      String      @unique
+  imageUrl  String?     // Optional image URL for the category
+  featured  Boolean     @default(false)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  
+  // Relationship to furniture
+  furniture Furniture[]
+}
+
+model ShowroomImage {
+  id          String    @id @default(uuid())
+  url         String
+  position    Int       @default(0)
+  title       String?
+  description String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("showroom_images")
+}
+
 model FurnitureImage {
   id          String    @id @default(uuid())
   url         String
@@ -23,26 +47,35 @@ model FurnitureImage {
 model Furniture {
   id          String             @id @default(uuid())
   name        String
-  size        Json?              // Changed to Json to support both string and array of strings
-  description String?            // Made explicitly optional
-  producer    String?            // Producer is optional and only visible to admin
+  size        Json?              
+  description String?            
+  producer    String?            
+  price       Decimal?           
   inStock     Boolean            @default(true)
-  category    String
+  categoryId  String             // Foreign key to Category
+  category    Category           @relation(fields: [categoryId], references: [id], onDelete: Restrict)
   createdAt   DateTime           @default(now())
   updatedAt   DateTime           @updatedAt
   variations  FurnitureVariation[]
   images      FurnitureImage[]   
+
+  @@index([categoryId])
 }
 
 model FurnitureVariation {
-  id        String   @id @default(uuid())
-  color     String
-  colorCode String
-  imageUrl  String
-  inStock   Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id                   String   @id @default(uuid())
+  name                 String   
+  textureType          String   
+  color                String?  
+  colorCode            String?  
+  textureImageUrl      String   
+  associatedImageIds   Json?    
+  inStock              Boolean  @default(true)
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
   
-  furniture   Furniture @relation(fields: [furnitureId], references: [id], onDelete: Cascade)
-  furnitureId String
+  furniture     Furniture @relation(fields: [furnitureId], references: [id], onDelete: Cascade)
+  furnitureId   String
+
+  @@index([furnitureId])
 }

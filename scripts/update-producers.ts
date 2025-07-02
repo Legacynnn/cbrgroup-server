@@ -14,11 +14,8 @@ async function updateProducers() {
           { producer: '' }
         ]
       },
-      select: {
-        id: true,
-        name: true,
-        category: true,
-        producer: true
+      include: {
+        category: true
       }
     });
 
@@ -34,7 +31,7 @@ async function updateProducers() {
 
     // Update producers based on category
     for (const furniture of furnitureItems) {
-      const producer = furniture.category.toLowerCase() === 'beds' || furniture.category.toLowerCase() === 'bed' 
+      const producer = furniture.category.name.toLowerCase() === 'beds' || furniture.category.name.toLowerCase() === 'bed' 
         ? 'bell-arte' 
         : 'voller';
 
@@ -49,7 +46,7 @@ async function updateProducers() {
         otherCount++;
       }
 
-      console.log(`✅ Updated "${furniture.name}" (${furniture.category}) -> ${producer}`);
+      console.log(`✅ Updated "${furniture.name}" (${furniture.category.name}) -> ${producer}`);
     }
 
     console.log('\n🎉 Producer update completed!');

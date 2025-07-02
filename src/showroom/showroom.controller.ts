@@ -1,15 +1,16 @@
 import {
   Controller,
   Post,
-  Param,
+  Get,
   Delete,
   Put,
+  Param,
+  Body,
   UseGuards,
   UseInterceptors,
   UploadedFiles,
   ParseFilePipe,
   MaxFileSizeValidator,
-  Body,
   HttpException,
   HttpStatus,
 } from '@nestjs/common';
@@ -18,13 +19,14 @@ import { diskStorage } from 'multer';
 import { v4 as uuid } from 'uuid';
 import { extname } from 'path';
 import { JwtAuthGuard } from '../auth/auth.guard';
-import { FurnitureService } from './fornitures.service';
+import { ShowroomService } from './showroom.service';
+import { CreateShowroomImageDto, UpdateShowroomImageDto } from './dto/showroom.dto';
 
-@Controller('furniture-images')
-export class FurnitureImagesController {
-  constructor(private readonly furnitureService: FurnitureService) {}
+@Controller('showroom')
+export class ShowroomController {
+  constructor(private readonly showroomService: ShowroomService) {}
 
-  @Post(':furnitureId')
+  @Post('upload')
   @UseGuards(JwtAuthGuard)
   @UseInterceptors(
     FilesInterceptor('images', 10, {
@@ -37,8 +39,8 @@ export class FurnitureImagesController {
         },
       }),
       limits: {
-        fileSize: 50 * 1024 * 1024, // 5MB
-        files: 10, // Máximo 10 arquivos
+        fileSize: 50 * 1024 * 1024,
+        files: 10,
       },
       fileFilter: (req, file, callback) => {
         if (!file.mimetype.match(/\/(jpg|jpeg|png|webp)$/)) {
@@ -49,7 +51,6 @@ export class FurnitureImagesController {
     }),
   )
   async uploadImages(
-    @Param('furnitureId') furnitureId: string,
     @UploadedFiles(
       new ParseFilePipe({
         validators: [new MaxFileSizeValidator({ maxSize: 50 * 1024 * 1024 })],
@@ -57,25 +58,26 @@ export class FurnitureImagesController {
       }),
     )
     files: Express.Multer.File[],
+    @Body() body: { title?: string; description?: string },
   ) {
     try {
-      await this.furnitureService.findOne(furnitureId);
-
-      const baseUrl = 'http://localhost:3333'
+      const baseUrl = 'http://localhost:3333';
       
-      const existingFurniture = await this.furnitureService.findOne(furnitureId);
-      const lastPosition = existingFurniture.images.length > 0 
-        ? Math.max(...existingFurniture.images.map(img => img.position)) 
+      const existingImages = await this.showroomService.findAll();
+      const lastPosition = existingImages.length > 0 
+        ? Math.max(...existingImages.map(img => img.position)) 
         : -1;
       
-      const images = files.map((file, index) => ({
+      const imagesToCreate = files.map((file, index) => ({
         url: `${baseUrl}/uploads/${file.filename}`,
-        position: lastPosition + 1 + index
+        position: lastPosition + 1 + index,
+        title: body.title || undefined,
+        description: body.description || undefined,
       }));
       
-      return this.furnitureService.addImages(furnitureId, images);
+      return this.showroomService.createImages(imagesToCreate);
     } catch (error) {
-      console.error('Error uploading images:', error);
+      console.error('Error uploading showroom images:', error);
       throw new HttpException(
         error.message || 'Failed to upload images',
         error.status || HttpStatus.INTERNAL_SERVER_ERROR,
@@ -83,20 +85,15 @@ export class FurnitureImagesController {
     }
   }
 
-  @Post(':furnitureId/url')
+  @Post('url')
   @UseGuards(JwtAuthGuard)
-  async addImageUrls(
-    @Param('furnitureId') furnitureId: string,
-    @Body() body: { images: Array<{ url: string; position: number }> },
-  ) {
+  async addImageUrls(@Body() createDto: CreateShowroomImageDto) {
     try {
-      await this.furnitureService.findOne(furnitureId);
-
-      if (!body.images || !Array.isArray(body.images) || body.images.length === 0) {
+      if (!createDto.images || !Array.isArray(createDto.images) || createDto.images.length === 0) {
         throw new HttpException('Images array is required', HttpStatus.BAD_REQUEST);
       }
 
-      for (const image of body.images) {
+      for (const image of createDto.images) {
         if (!image.url || typeof image.url !== 'string') {
           throw new HttpException('Valid image URL is required', HttpStatus.BAD_REQUEST);
         }
@@ -107,19 +104,21 @@ export class FurnitureImagesController {
         }
       }
 
-      const existingFurniture = await this.furnitureService.findOne(furnitureId);
-      const lastPosition = existingFurniture.images.length > 0 
-        ? Math.max(...existingFurniture.images.map(img => img.position)) 
+      const existingImages = await this.showroomService.findAll();
+      const lastPosition = existingImages.length > 0 
+        ? Math.max(...existingImages.map(img => img.position)) 
         : -1;
 
-      const images = body.images.map((image, index) => ({
+      const imagesToCreate = createDto.images.map((image, index) => ({
         url: image.url.trim(),
-        position: image.position !== undefined ? image.position : lastPosition + 1 + index
+        position: image.position !== undefined ? image.position : lastPosition + 1 + index,
+        title: image.title || undefined,
+        description: image.description || undefined,
       }));
 
-      return this.furnitureService.addImages(furnitureId, images);
+      return this.showroomService.createImages(imagesToCreate);
     } catch (error) {
-      console.error('Error adding image URLs:', error);
+      console.error('Error adding showroom image URLs:', error);
       throw new HttpException(
         error.message || 'Failed to add image URLs',
         error.status || HttpStatus.INTERNAL_SERVER_ERROR,
@@ -127,35 +126,47 @@ export class FurnitureImagesController {
     }
   }
 
-  @Put(':furnitureId/positions')
+  @Get()
+  async findAll() {
+    return this.showroomService.findAll();
+  }
+
+  @Get('admin')
+  @UseGuards(JwtAuthGuard)
+  async findAllAdmin() {
+    return this.showroomService.findAll();
+  }
+
+  @Put(':id')
+  @UseGuards(JwtAuthGuard)
+  async update(
+    @Param('id') id: string,
+    @Body() updateDto: UpdateShowroomImageDto,
+  ) {
+    try {
+      return this.showroomService.update(id, updateDto);
+    } catch (error) {
+      console.error('Error updating showroom image:', error);
+      throw new HttpException(
+        error.message || 'Failed to update image',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
+  @Put('positions')
   @UseGuards(JwtAuthGuard)
   async updatePositions(
-    @Param('furnitureId') furnitureId: string,
     @Body() updateData: { images: Array<{ id: string; position: number }> },
   ) {
     try {
-      console.log('=== Position Update Request ===');
-      console.log('Furniture ID:', furnitureId);
-      console.log('Update data received:', JSON.stringify(updateData, null, 2));
-      
       if (!updateData || !updateData.images || !Array.isArray(updateData.images)) {
-        console.log('Invalid update data structure');
         throw new HttpException('Invalid update data', HttpStatus.BAD_REQUEST);
       }
       
-      console.log('Calling updateImagePositions service...');
-      const result = await this.furnitureService.updateImagePositions(
-        furnitureId,
-        updateData.images,
-      );
-      
-      console.log('Position update result:', result ? 'Success' : 'Failed');
-      console.log('Updated furniture images:', result.images?.map((img: any) => ({ id: img.id, position: img.position })));
-      console.log('=== Position Update Complete ===');
-      
-      return result;
+      return this.showroomService.updatePositions(updateData.images);
     } catch (error) {
-      console.error('Error updating image positions:', error);
+      console.error('Error updating showroom image positions:', error);
       throw new HttpException(
         error.message || 'Failed to update image positions',
         error.status || HttpStatus.INTERNAL_SERVER_ERROR,
@@ -163,17 +174,17 @@ export class FurnitureImagesController {
     }
   }
 
-  @Delete(':imageId')
+  @Delete(':id')
   @UseGuards(JwtAuthGuard)
-  async removeImage(@Param('imageId') imageId: string) {
+  async remove(@Param('id') id: string) {
     try {
-      return this.furnitureService.removeImage(imageId);
+      return this.showroomService.remove(id);
     } catch (error) {
-      console.error('Error deleting image:', error);
+      console.error('Error deleting showroom image:', error);
       throw new HttpException(
         error.message || 'Failed to delete image',
         error.status || HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
   }
-}
+} 

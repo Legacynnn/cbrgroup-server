@@ -1,13 +1,17 @@
 export class FurnitureImageDto {
   url: string;
   position: number;
+  variantIds?: string[];
 }
 
 export class CreateFurnitureVariationDto {
-  color: string;
-  colorCode: string;
-  imageUrl: string;
+  name: string;
+  textureType: string;
+  color?: string;
+  colorCode?: string;
+  textureImageUrl: string;
   inStock: boolean;
+  associatedImageIds?: string[];
 }
 
 export class CreateFurnitureDto {
@@ -15,8 +19,9 @@ export class CreateFurnitureDto {
   size: string | string[];
   description?: string;
   producer?: string;
+  price?: number;
   inStock: boolean;
-  category: string;
+  categoryId: string;
   variations?: CreateFurnitureVariationDto[];
   images?: FurnitureImageDto[];
   imageUrl?: string;
@@ -32,10 +37,13 @@ export class PaginationQueryDto {
   page?: number = 1;
   limit?: number = 10;
   search?: string;
-  category?: string;
+  categoryId?: string;
   producer?: string;
   inStock?: boolean;
-  sortBy?: 'name' | 'category' | 'producer' | 'createdAt' | 'updatedAt' = 'createdAt';
+  minPrice?: number;
+  maxPrice?: number;
+  textureType?: string;
+  sortBy?: 'name' | 'category' | 'producer' | 'price' | 'createdAt' | 'updatedAt' = 'createdAt';
   sortOrder?: 'asc' | 'desc' = 'desc';
 }
 
@@ -51,9 +59,12 @@ export class PaginationResponseDto<T> {
   };
   filters?: {
     search?: string;
-    category?: string;
+    categoryId?: string;
     producer?: string;
     inStock?: boolean;
+    minPrice?: number;
+    maxPrice?: number;
+    textureType?: string;
     sortBy: string;
     sortOrder: string;
   };

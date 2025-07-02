@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { FurnitureModule } from './fornitures/fornitures.module';
+import { ShowroomModule } from './showroom/showroom.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 
@@ -12,8 +13,9 @@ import { join } from 'path';
     }),
     AuthModule,
     FurnitureModule,
+    ShowroomModule,
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'uploads'),
+      rootPath: join(process.cwd(), 'uploads'),
       serveRoot: '/uploads',
     }),
   ],
