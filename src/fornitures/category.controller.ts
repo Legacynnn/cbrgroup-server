@@ -96,7 +96,7 @@ export class CategoryController {
     try {
       await this.categoryService.findOne(id);
 
-      const baseUrl = 'http://localhost:3333';
+      const baseUrl = process.env.API_URL;
       const imageUrl = `${baseUrl}/uploads/${file.filename}`;
       
       return this.categoryService.updateImage(id, { imageUrl });

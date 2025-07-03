@@ -61,7 +61,7 @@ export class ShowroomController {
     @Body() body: { title?: string; description?: string },
   ) {
     try {
-      const baseUrl = 'http://localhost:3333';
+      const baseUrl = process.env.API_URL;
       
       const existingImages = await this.showroomService.findAll();
       const lastPosition = existingImages.length > 0 
