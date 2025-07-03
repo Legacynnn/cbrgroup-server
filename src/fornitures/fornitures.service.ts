@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
-import { CreateFurnitureDto, PaginationQueryDto, PaginationResponseDto } from './dto/create-forniture.dto';
+import { CreateFurnitureDto, PaginationQueryDto, PaginationResponseDto, UpdateFeaturedDto, UpdatePriceDto } from './dto/create-forniture.dto';
 import { UpdateFurnitureDto } from './dto/update-forniture.dto';
 import { existsSync, unlinkSync } from 'fs';
 import { join } from 'path';
@@ -8,10 +8,37 @@ import { Decimal } from '@prisma/client/runtime/library';
 
 @Injectable()
 export class FurnitureService {
-  constructor(private prisma: PrismaService) {}
+  constructor(private prisma: PrismaService) {
+    this.startPromotionExpirationChecker();
+  }
+
+  private startPromotionExpirationChecker(): void {
+    setInterval(async () => {
+      await this.checkExpiredPromotions();
+    }, 60000);
+  }
+
+  private async checkExpiredPromotions(): Promise<void> {
+    try {
+      const now = new Date();
+      await this.prisma.furniture.updateMany({
+        where: {
+          isPromotionActive: true,
+          promotionExpiresAt: {
+            lte: now
+          }
+        },
+        data: {
+          isPromotionActive: false
+        }
+      });
+    } catch (error) {
+      console.error('Error checking expired promotions:', error);
+    }
+  }
 
   async create(createFurnitureDto: CreateFurnitureDto) {
-    const { variations, images, imageUrl, updateImageUrl, price, ...furnitureData } = createFurnitureDto;
+    const { variations, images, imageUrl, updateImageUrl, price, promotionPrice, ...furnitureData } = createFurnitureDto;
     
     // Verify category exists
     const category = await this.prisma.category.findUnique({
@@ -27,6 +54,7 @@ export class FurnitureService {
         data: {
           ...furnitureData,
           price: price ? new Decimal(price) : null,
+          promotionPrice: promotionPrice ? new Decimal(promotionPrice) : null,
           variations: variations && variations.length > 0 ? {
             create: variations.map(variation => ({
               name: variation.name,
@@ -89,12 +117,12 @@ export class FurnitureService {
       },
     });
 
-    // Remove producer field from public responses and format price
     return furniture.map(item => {
       const { producer, ...publicData } = item;
       return {
         ...publicData,
         price: item.price ? parseFloat(item.price.toString()) : null,
+        promotionPrice: item.promotionPrice ? parseFloat(item.promotionPrice.toString()) : null,
       };
     });
   }
@@ -112,10 +140,10 @@ export class FurnitureService {
       },
     });
 
-    // Format price for admin responses
     return furniture.map(item => ({
       ...item,
       price: item.price ? parseFloat(item.price.toString()) : null,
+      promotionPrice: item.promotionPrice ? parseFloat(item.promotionPrice.toString()) : null,
     }));
   }
 
@@ -131,6 +159,8 @@ export class FurnitureService {
       categoryId,
       producer,
       inStock,
+      featured,
+      isPromotionActive,
       minPrice,
       maxPrice,
       textureType,
@@ -169,6 +199,22 @@ export class FurnitureService {
         equals: producer,
         mode: 'insensitive'
       };
+    }
+
+    // Add featured filter
+    if (featured !== undefined) {
+      const featuredValue = typeof featured === 'string' 
+        ? featured === 'true' 
+        : Boolean(featured);
+      where.featured = featuredValue;
+    }
+
+    // Add promotion filter
+    if (isPromotionActive !== undefined) {
+      const promotionValue = typeof isPromotionActive === 'string' 
+        ? isPromotionActive === 'true' 
+        : Boolean(isPromotionActive);
+      where.isPromotionActive = promotionValue;
     }
 
     // Add price range filters
@@ -724,6 +770,136 @@ export class FurnitureService {
     
     return this.prisma.furniture.delete({
       where: { id },
+    });
+  }
+
+  async updateFeatured(id: string, updateFeaturedDto: UpdateFeaturedDto) {
+    await this.findOneAdmin(id);
+    
+    const updatedFurniture = await this.prisma.furniture.update({
+      where: { id },
+      data: { featured: updateFeaturedDto.featured },
+      include: {
+        category: true,
+        variations: true,
+        images: {
+          orderBy: {
+            position: 'asc'
+          }
+        },
+      },
+    });
+
+    return {
+      ...updatedFurniture,
+      price: updatedFurniture.price ? parseFloat(updatedFurniture.price.toString()) : null,
+      promotionPrice: updatedFurniture.promotionPrice ? parseFloat(updatedFurniture.promotionPrice.toString()) : null,
+    };
+  }
+
+  async updatePrice(id: string, updatePriceDto: UpdatePriceDto) {
+    await this.findOneAdmin(id);
+    
+    const updateData: any = {};
+    
+    if (updatePriceDto.price !== undefined) {
+      updateData.price = updatePriceDto.price ? new Decimal(updatePriceDto.price) : null;
+    }
+    
+    if (updatePriceDto.promotionPrice !== undefined) {
+      updateData.promotionPrice = updatePriceDto.promotionPrice ? new Decimal(updatePriceDto.promotionPrice) : null;
+    }
+    
+    if (updatePriceDto.isPromotionActive !== undefined) {
+      updateData.isPromotionActive = updatePriceDto.isPromotionActive;
+    }
+    
+    if (updatePriceDto.promotionExpiresAt !== undefined) {
+      updateData.promotionExpiresAt = updatePriceDto.promotionExpiresAt;
+    }
+
+    if (updatePriceDto.isPromotionActive && !updateData.promotionPrice && !updatePriceDto.promotionPrice) {
+      throw new Error('Cannot activate promotion without promotion price');
+    }
+
+    const updatedFurniture = await this.prisma.furniture.update({
+      where: { id },
+      data: updateData,
+      include: {
+        category: true,
+        variations: true,
+        images: {
+          orderBy: {
+            position: 'asc'
+          }
+        },
+      },
+    });
+
+    return {
+      ...updatedFurniture,
+      price: updatedFurniture.price ? parseFloat(updatedFurniture.price.toString()) : null,
+      promotionPrice: updatedFurniture.promotionPrice ? parseFloat(updatedFurniture.promotionPrice.toString()) : null,
+    };
+  }
+
+  async getFeaturedFurniture() {
+    const furniture = await this.prisma.furniture.findMany({
+      where: { 
+        featured: true,
+        inStock: true 
+      },
+      include: {
+        category: true,
+        variations: true,
+        images: {
+          orderBy: {
+            position: 'asc'
+          }
+        },
+      },
+      orderBy: {
+        updatedAt: 'desc'
+      },
+    });
+
+    return furniture.map(item => {
+      const { producer, ...publicData } = item;
+      return {
+        ...publicData,
+        price: item.price ? parseFloat(item.price.toString()) : null,
+        promotionPrice: item.promotionPrice ? parseFloat(item.promotionPrice.toString()) : null,
+      };
+    });
+  }
+
+  async getPromotionFurniture() {
+    const furniture = await this.prisma.furniture.findMany({
+      where: { 
+        isPromotionActive: true,
+        inStock: true 
+      },
+      include: {
+        category: true,
+        variations: true,
+        images: {
+          orderBy: {
+            position: 'asc'
+          }
+        },
+      },
+      orderBy: {
+        updatedAt: 'desc'
+      },
+    });
+
+    return furniture.map(item => {
+      const { producer, ...publicData } = item;
+      return {
+        ...publicData,
+        price: item.price ? parseFloat(item.price.toString()) : null,
+        promotionPrice: item.promotionPrice ? parseFloat(item.promotionPrice.toString()) : null,
+      };
     });
   }
 } 

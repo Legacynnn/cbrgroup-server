@@ -13,7 +13,7 @@ import {
   Query,
 } from '@nestjs/common';
 import { FurnitureService } from './fornitures.service';
-import { CreateFurnitureDto, BulkUpdateStockDto, PaginationQueryDto } from './dto/create-forniture.dto';
+import { CreateFurnitureDto, BulkUpdateStockDto, PaginationQueryDto, UpdateFeaturedDto, UpdatePriceDto } from './dto/create-forniture.dto';
 import { UpdateFurnitureDto } from './dto/update-forniture.dto';
 import { JwtAuthGuard } from '../auth/auth.guard';
 
@@ -113,6 +113,32 @@ export class FurnitureController {
     return this.furnitureService.findTextureTypes();
   }
 
+  @Get('featured')
+  async getFeaturedFurniture() {
+    try {
+      return this.furnitureService.getFeaturedFurniture();
+    } catch (error) {
+      console.error('Error fetching featured furniture:', error);
+      throw new HttpException(
+        error.message || 'Failed to fetch featured furniture',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
+  @Get('promotions')
+  async getPromotionFurniture() {
+    try {
+      return this.furnitureService.getPromotionFurniture();
+    } catch (error) {
+      console.error('Error fetching promotion furniture:', error);
+      throw new HttpException(
+        error.message || 'Failed to fetch promotion furniture',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
   @Patch('bulk-stock')
   @UseGuards(JwtAuthGuard)
   async bulkUpdateStock(@Body() bulkUpdateStockDto: BulkUpdateStockDto) {
@@ -125,6 +151,40 @@ export class FurnitureController {
       console.error('Error bulk updating stock:', error);
       throw new HttpException(
         error.message || 'Failed to update furniture stock',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
+  @Patch(':id/featured')
+  @UseGuards(JwtAuthGuard)
+  async updateFeatured(
+    @Param('id') id: string,
+    @Body() updateFeaturedDto: UpdateFeaturedDto,
+  ) {
+    try {
+      return this.furnitureService.updateFeatured(id, updateFeaturedDto);
+    } catch (error) {
+      console.error('Error updating featured status:', error);
+      throw new HttpException(
+        error.message || 'Failed to update featured status',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
+  @Patch(':id/price')
+  @UseGuards(JwtAuthGuard)
+  async updatePrice(
+    @Param('id') id: string,
+    @Body() updatePriceDto: UpdatePriceDto,
+  ) {
+    try {
+      return this.furnitureService.updatePrice(id, updatePriceDto);
+    } catch (error) {
+      console.error('Error updating price/promotion:', error);
+      throw new HttpException(
+        error.message || 'Failed to update price/promotion',
         error.status || HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }

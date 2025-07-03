@@ -45,21 +45,28 @@ model FurnitureImage {
 }
 
 model Furniture {
-  id          String             @id @default(uuid())
-  name        String
-  size        Json?              
-  description String?            
-  producer    String?            
-  price       Decimal?           
-  inStock     Boolean            @default(true)
-  categoryId  String             // Foreign key to Category
-  category    Category           @relation(fields: [categoryId], references: [id], onDelete: Restrict)
-  createdAt   DateTime           @default(now())
-  updatedAt   DateTime           @updatedAt
-  variations  FurnitureVariation[]
-  images      FurnitureImage[]   
+  id                    String             @id @default(uuid())
+  name                  String
+  size                  Json?              
+  description           String?            
+  producer              String?            
+  price                 Decimal?           
+  featured              Boolean            @default(false)
+  promotionPrice        Decimal?           
+  isPromotionActive     Boolean            @default(false)
+  promotionExpiresAt    DateTime?          
+  inStock               Boolean            @default(true)
+  categoryId            String             // Foreign key to Category
+  category              Category           @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  createdAt             DateTime           @default(now())
+  updatedAt             DateTime           @updatedAt
+  variations            FurnitureVariation[]
+  images                FurnitureImage[]   
 
   @@index([categoryId])
+  @@index([featured])
+  @@index([isPromotionActive])
+  @@index([promotionExpiresAt])
 }
 
 model FurnitureVariation {

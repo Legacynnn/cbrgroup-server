@@ -20,12 +20,27 @@ export class CreateFurnitureDto {
   description?: string;
   producer?: string;
   price?: number;
+  featured?: boolean;
+  promotionPrice?: number;
+  isPromotionActive?: boolean;
+  promotionExpiresAt?: Date;
   inStock: boolean;
   categoryId: string;
   variations?: CreateFurnitureVariationDto[];
   images?: FurnitureImageDto[];
   imageUrl?: string;
   updateImageUrl?: boolean;
+}
+
+export class UpdateFeaturedDto {
+  featured: boolean;
+}
+
+export class UpdatePriceDto {
+  price?: number;
+  promotionPrice?: number;
+  isPromotionActive?: boolean;
+  promotionExpiresAt?: Date;
 }
 
 export class BulkUpdateStockDto {
@@ -40,10 +55,12 @@ export class PaginationQueryDto {
   categoryId?: string;
   producer?: string;
   inStock?: boolean;
+  featured?: boolean;
+  isPromotionActive?: boolean;
   minPrice?: number;
   maxPrice?: number;
   textureType?: string;
-  sortBy?: 'name' | 'category' | 'producer' | 'price' | 'createdAt' | 'updatedAt' = 'createdAt';
+  sortBy?: 'name' | 'category' | 'producer' | 'price' | 'createdAt' | 'updatedAt' | 'featured' = 'createdAt';
   sortOrder?: 'asc' | 'desc' = 'desc';
 }
 
@@ -62,6 +79,8 @@ export class PaginationResponseDto<T> {
     categoryId?: string;
     producer?: string;
     inStock?: boolean;
+    featured?: boolean;
+    isPromotionActive?: boolean;
     minPrice?: number;
     maxPrice?: number;
     textureType?: string;
