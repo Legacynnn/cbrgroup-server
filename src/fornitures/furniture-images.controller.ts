@@ -61,7 +61,7 @@ export class FurnitureImagesController {
     try {
       await this.furnitureService.findOne(furnitureId);
 
-      const baseUrl = 'http://localhost:3333'
+      const baseUrl = process.env.API_URL
       
       const existingFurniture = await this.furnitureService.findOne(furnitureId);
       const lastPosition = existingFurniture.images.length > 0 
