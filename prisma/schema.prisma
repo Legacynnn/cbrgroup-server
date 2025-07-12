@@ -86,3 +86,80 @@ model FurnitureVariation {
 
   @@index([furnitureId])
 }
+
+enum QuoteStatus {
+  OPEN
+  ANSWERED
+  BUDGET_WAITING
+  BUDGET_ACCEPTED
+  BUDGET_DENIED
+  DELIVERED
+}
+
+model Quote {
+  id           String      @id @default(uuid())
+  customerName String
+  customerEmail String
+  customerPhone String
+  postcode     String
+  address      String
+  message      String?
+  status       QuoteStatus @default(OPEN)
+  boardPosition Int        @default(0) // For drag-n-drop board ordering
+  totalItems   Int         @default(0)
+  adminNotes   String?     // Internal notes for admin
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  
+  items        QuoteItem[]
+  history      QuoteHistory[]
+
+  @@index([status])
+  @@index([boardPosition])
+  @@index([createdAt])
+}
+
+model QuoteItem {
+  id           String   @id @default(uuid())
+  furnitureId  String
+  furnitureName String  // Store name at time of quote
+  category     String   // Store category at time of quote
+  size         String?  // Store size at time of quote
+  color        String?  // Store color variation if selected
+  colorCode    String?  // Store color code if selected
+  variationId  String?  // Reference to specific variation
+  imageUrl     String?  // Store image URL at time of quote
+  quantity     Int      @default(1)
+  createdAt    DateTime @default(now())
+  
+  quote        Quote    @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+  quoteId      String
+
+  @@index([quoteId])
+  @@index([furnitureId])
+}
+
+enum QuoteHistoryAction {
+  CREATED
+  STATUS_CHANGED
+  POSITION_CHANGED
+  ADMIN_NOTES_UPDATED
+  CUSTOMER_INFO_UPDATED
+  ITEMS_UPDATED
+}
+
+model QuoteHistory {
+  id          String             @id @default(uuid())
+  action      QuoteHistoryAction
+  description String             // Human-readable description of what changed
+  oldValue    Json?              // Previous value (for tracking changes)
+  newValue    Json?              // New value (for tracking changes)
+  performedBy String?            // Who made the change (admin user ID or 'system')
+  createdAt   DateTime           @default(now())
+  
+  quote       Quote              @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+  quoteId     String
+
+  @@index([quoteId])
+  @@index([createdAt])
+}
