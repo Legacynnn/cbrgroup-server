@@ -75,7 +75,7 @@ model FurnitureVariation {
   textureType          String   
   color                String?  
   colorCode            String?  
-  textureImageUrl      String   
+  textureImageUrl      String?  
   associatedImageIds   Json?    
   inStock              Boolean  @default(true)
   createdAt            DateTime @default(now())

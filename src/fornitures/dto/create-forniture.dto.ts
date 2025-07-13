@@ -9,7 +9,7 @@ export class CreateFurnitureVariationDto {
   textureType: string;
   color?: string;
   colorCode?: string;
-  textureImageUrl: string;
+  textureImageUrl?: string;
   inStock: boolean;
   associatedImageIds?: string[];
 }

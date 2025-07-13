@@ -176,4 +176,57 @@ export class FurnitureImagesController {
       );
     }
   }
+
+  @Post('texture/upload')
+  @UseGuards(JwtAuthGuard)
+  @UseInterceptors(
+    FilesInterceptor('texture', 1, {
+      storage: diskStorage({
+        destination: './uploads',
+        filename: (req, file, callback) => {
+          const uniqueName = uuid();
+          const ext = extname(file.originalname);
+          callback(null, `texture-${uniqueName}${ext}`);
+        },
+      }),
+      limits: {
+        fileSize: 10 * 1024 * 1024, // 10MB
+        files: 1,
+      },
+      fileFilter: (req, file, callback) => {
+        if (!file.mimetype.match(/\/(jpg|jpeg|png|webp)$/)) {
+          return callback(new Error('Only images are allowed for textures!'), false);
+        }
+        callback(null, true);
+      },
+    }),
+  )
+  async uploadTextureImage(
+    @UploadedFiles(
+      new ParseFilePipe({
+        validators: [new MaxFileSizeValidator({ maxSize: 10 * 1024 * 1024 })],
+        fileIsRequired: true,
+      }),
+    )
+    files: Express.Multer.File[],
+  ) {
+    try {
+      const file = files[0];
+      const baseUrl = process.env.API_URL;
+      const textureUrl = `${baseUrl}/uploads/${file.filename}`;
+      
+      return {
+        url: textureUrl,
+        filename: file.filename,
+        originalName: file.originalname,
+        size: file.size,
+      };
+    } catch (error) {
+      console.error('Error uploading texture image:', error);
+      throw new HttpException(
+        error.message || 'Failed to upload texture image',
+        error.status || HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
 }
