@@ -461,7 +461,8 @@ export class QuotesService {
     const quotesByStatus: Record<string, QuoteResponseDto[]> = {};
 
     for (const status of Object.values(QuoteStatus)) {
-      quotesByStatus[status] = quotes
+      const statusKey = status as string;
+      quotesByStatus[statusKey] = quotes
         .filter(quote => quote.status === status)
         .map(quote => this.formatQuoteResponse(quote));
     }
