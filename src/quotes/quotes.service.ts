@@ -9,7 +9,7 @@ import {
   QuotePaginationResponseDto,
   QuoteResponseDto 
 } from './dto/quote.dto';
-import { QuoteStatus, QuoteHistoryAction } from '@prisma/client';
+import { QuoteStatus, QuoteHistoryAction } from './dto/quote.dto';
 
 @Injectable()
 export class QuotesService {

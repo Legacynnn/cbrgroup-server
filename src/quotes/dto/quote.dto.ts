@@ -1,6 +1,23 @@
 import { IsString, IsEmail, IsOptional, IsArray, ValidateNested, IsInt, Min, IsEnum, IsUUID } from 'class-validator';
 import { Type } from 'class-transformer';
-import { QuoteStatus, QuoteHistoryAction } from '@prisma/client';
+
+export enum QuoteStatus {
+  OPEN = 'OPEN',
+  ANSWERED = 'ANSWERED',
+  BUDGET_WAITING = 'BUDGET_WAITING',
+  BUDGET_ACCEPTED = 'BUDGET_ACCEPTED',
+  BUDGET_DENIED = 'BUDGET_DENIED',
+  DELIVERED = 'DELIVERED'
+}
+
+export enum QuoteHistoryAction {
+  CREATED = 'CREATED',
+  STATUS_CHANGED = 'STATUS_CHANGED',
+  POSITION_CHANGED = 'POSITION_CHANGED',
+  ADMIN_NOTES_UPDATED = 'ADMIN_NOTES_UPDATED',
+  CUSTOMER_INFO_UPDATED = 'CUSTOMER_INFO_UPDATED',
+  ITEMS_UPDATED = 'ITEMS_UPDATED'
+}
 
 export class CreateQuoteItemDto {
   @IsString()
