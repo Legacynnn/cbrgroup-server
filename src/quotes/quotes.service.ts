@@ -460,12 +460,11 @@ export class QuotesService {
 
     const quotesByStatus: Record<string, QuoteResponseDto[]> = {};
 
-    for (const status of Object.values(QuoteStatus)) {
-      const statusKey = status as string;
-      quotesByStatus[statusKey] = quotes
+    (Object.values(QuoteStatus) as QuoteStatus[]).forEach(status => {
+      quotesByStatus[status] = quotes
         .filter(quote => quote.status === status)
         .map(quote => this.formatQuoteResponse(quote));
-    }
+    });
 
     return quotesByStatus;
   }
