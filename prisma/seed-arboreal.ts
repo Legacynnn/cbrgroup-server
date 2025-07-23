@@ -29,7 +29,7 @@ async function main() {
   console.log('🌳 Starting Arboreal furniture data import...');
 
   // Read the arboreal JSON file
-  const arborealDataPath = path.join(process.cwd(), '..', 'cbr-crawler', 'output', 'arboreal-final-ultimate-database.json');
+  const arborealDataPath = path.join(process.cwd(),'scripts', 'arboreal.json');
   
   if (!fs.existsSync(arborealDataPath)) {
     throw new Error(`Arboreal data file not found at: ${arborealDataPath}`);
