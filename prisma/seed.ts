@@ -26,6 +26,28 @@ interface BellArteFurniture {
   }>;
 }
 
+interface ArborealFurniture {
+  name: string;
+  description: string;
+  size: string[];
+  inStock: boolean;
+  category: string;
+  images: Array<{
+    url: string;
+    position: number;
+  }>;
+}
+
+// Category mapping for standardization
+const categoryMapping: Record<string, string> = {
+  'dinner tables': 'Dining Tables',
+  'Dinning Tables': 'Dining Tables', // Fix typo - both map to same category
+  'curved-tables': 'Curved Tables',
+  'center-tables': 'Center Tables',
+  'benches': 'Benches',
+  'sideboards': 'Sideboards'
+};
+
 async function main() {
   console.log('🚀 Starting PRODUCTION database seeding...');
   console.log('This will create categories and import all furniture data.\n');
@@ -36,11 +58,14 @@ async function main() {
     
     // Step 2: Import Bell-Arte (beds) data if exists
     await importBellArteData();
+
+    // Step 3: Import Arboreal furniture data
+    await importArborealData();
     
-    // Step 3: Update producers based on categories
+    // Step 4: Update producers based on categories
     await updateProducers();
     
-    // Step 4: Show final statistics
+    // Step 5: Show final statistics
     await showFinalStats();
     
     console.log('\n🎉 PRODUCTION seeding completed successfully!');
@@ -201,8 +226,87 @@ async function importBellArteData() {
   console.log(`✅ Bell-Arte import: ${createdCount} created, ${skippedCount} skipped`);
 }
 
+async function importArborealData() {
+  console.log('\n📦 Step 3: Importing Arboreal furniture data...');
+  
+  const arborealDataPath = path.join(process.cwd(), '..', 'cbr-crawler', 'output', 'arboreal-final-ultimate-database.json');
+  
+  if (!fs.existsSync(arborealDataPath)) {
+    console.log('⚠️ Arboreal data file not found, skipping...');
+    return;
+  }
+
+  const arborealData: ArborealFurniture[] = JSON.parse(fs.readFileSync(arborealDataPath, 'utf8'));
+  console.log(`Found ${arborealData.length} Arboreal furniture items`);
+
+  let createdCount = 0;
+  let skippedCount = 0;
+
+  for (const item of arborealData) {
+    try {
+      // Standardize category name using mapping
+      const standardizedCategoryName = categoryMapping[item.category] || item.category;
+      
+      const existingFurniture = await prisma.furniture.findFirst({
+        where: {
+          name: item.name,
+          producer: 'arboreal'
+        }
+      });
+
+      if (existingFurniture) {
+        skippedCount++;
+        continue;
+      }
+
+      let category = await prisma.category.findFirst({
+        where: {
+          name: {
+            equals: standardizedCategoryName,
+            mode: 'insensitive'
+          }
+        }
+      });
+
+      if (!category) {
+        category = await prisma.category.create({
+          data: {
+            name: standardizedCategoryName,
+            featured: false
+          }
+        });
+        console.log(`📁 Created category: "${category.name}"`);
+      }
+
+      await prisma.furniture.create({
+        data: {
+          name: item.name,
+          size: JSON.stringify(item.size), // Store size array as JSON
+          description: item.description,
+          inStock: item.inStock,
+          categoryId: category.id,
+          producer: 'arboreal',
+          featured: false,
+          images: {
+            create: item.images.map(img => ({
+              url: img.url,
+              position: img.position,
+            }))
+          }
+        }
+      });
+
+      createdCount++;
+    } catch (error) {
+      console.error(`❌ Error creating "${item.name}":`, error);
+    }
+  }
+
+  console.log(`✅ Arboreal import: ${createdCount} created, ${skippedCount} skipped`);
+}
+
 async function updateProducers() {
-  console.log('\n🔄 Step 3: Updating producers for existing furniture...');
+  console.log('\n🔄 Step 4: Updating producers for existing furniture...');
   
   const furnitureWithoutProducer = await prisma.furniture.findMany({
     where: {
@@ -271,6 +375,12 @@ async function showFinalStats() {
   console.log(`- Total: ${totalFurniture} items`);
   console.log(`- In Stock: ${inStockCount} items`);
   console.log(`- Out of Stock: ${totalFurniture - inStockCount} items`);
+
+  // Show category mapping applied for Arboreal
+  console.log(`\n🗂️ Category mappings applied:`);
+  Object.entries(categoryMapping).forEach(([original, mapped]) => {
+    console.log(`- "${original}" → "${mapped}"`);
+  });
 }
 
 main()
