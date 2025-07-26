@@ -12,6 +12,7 @@
     "db:seed-prod": "npx prisma migrate deploy && tsx prisma/seed.ts",
     "db:seed-voller": "tsx prisma/seed-voller.ts",
     "db:seed-arboreal": "tsx prisma/seed-arboreal.ts",
+    "db:seed-dk": "tsx prisma/seed-dk.ts",
     "db:update-producers": "tsx scripts/update-producers.ts",
     "db:update-producers-prod": "node scripts/update-producers.js",
     "start": "nest start",
