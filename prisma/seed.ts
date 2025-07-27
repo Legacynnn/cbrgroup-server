@@ -38,6 +38,29 @@ interface ArborealFurniture {
   }>;
 }
 
+interface LivingVariation {
+  name: string;
+  textureType: string;
+  color?: string;
+  colorCode?: string;
+  textureImageUrl?: string | null;
+  associatedImageIds?: any | null;
+  inStock: boolean;
+}
+
+interface LivingFurniture {
+  name: string;
+  description: string;
+  inStock: boolean;
+  category: string;
+  producer: string;
+  images: Array<{
+    url: string;
+    position: number;
+  }>;
+  variations: LivingVariation[];
+}
+
 // Category mapping for standardization
 const categoryMapping: Record<string, string> = {
   'dinner tables': 'Dining Tables',
@@ -62,10 +85,13 @@ async function main() {
     // Step 3: Import Arboreal furniture data
     await importArborealData();
     
-    // Step 4: Update producers based on categories
+    // Step 4: Import Living (BellArte Living) furniture data
+    await importLivingData();
+    
+    // Step 5: Update producers based on categories
     await updateProducers();
     
-    // Step 5: Show final statistics
+    // Step 6: Show final statistics
     await showFinalStats();
     
     console.log('\n🎉 PRODUCTION seeding completed successfully!');
@@ -305,8 +331,132 @@ async function importArborealData() {
   console.log(`✅ Arboreal import: ${createdCount} created, ${skippedCount} skipped`);
 }
 
+async function importLivingData() {
+  console.log('\n📦 Step 4: Importing Living furniture data...');
+  
+  const livingDataPath = path.join(process.cwd(), 'scripts', 'living.json');
+  
+  if (!fs.existsSync(livingDataPath)) {
+    console.log('⚠️ Living data file not found, skipping...');
+    return;
+  }
+
+  const livingData: LivingFurniture[] = JSON.parse(fs.readFileSync(livingDataPath, 'utf8'));
+  console.log(`Found ${livingData.length} Living furniture items`);
+
+  let createdCount = 0;
+  let skippedCount = 0;
+  let updatedCount = 0;
+
+  for (const item of livingData) {
+    try {
+      const existingFurniture = await prisma.furniture.findFirst({
+        where: {
+          name: item.name,
+          producer: item.producer
+        },
+        include: {
+          variations: true,
+          images: true
+        }
+      });
+
+      let category = await prisma.category.findFirst({
+        where: {
+          name: {
+            equals: item.category,
+            mode: 'insensitive'
+          }
+        }
+      });
+
+      if (!category) {
+        category = await prisma.category.create({
+          data: {
+            name: item.category,
+            featured: false
+          }
+        });
+        console.log(`📁 Created category: "${category.name}"`);
+      }
+
+      if (existingFurniture) {
+        console.log(`🔄 Updating existing furniture: "${item.name}"`);
+        
+        await prisma.furniture.update({
+          where: { id: existingFurniture.id },
+          data: {
+            description: item.description,
+            inStock: item.inStock,
+            categoryId: category.id,
+            producer: item.producer,
+            images: {
+              deleteMany: {},
+              create: item.images.map(img => ({
+                url: img.url,
+                position: img.position,
+              }))
+            },
+            variations: {
+              deleteMany: {},
+              create: item.variations.map(variation => ({
+                name: variation.name,
+                textureType: variation.textureType,
+                color: variation.color || null,
+                colorCode: variation.colorCode || null,
+                textureImageUrl: variation.textureImageUrl || null,
+                associatedImageIds: variation.associatedImageIds ? JSON.stringify(variation.associatedImageIds) : null,
+                inStock: variation.inStock
+              }))
+            }
+          }
+        });
+        
+        updatedCount++;
+      } else {
+        console.log(`✨ Creating new furniture: "${item.name}"`);
+        
+        await prisma.furniture.create({
+          data: {
+            name: item.name,
+            description: item.description,
+            inStock: item.inStock,
+            categoryId: category.id,
+            producer: item.producer,
+            featured: false,
+            images: {
+              create: item.images.map(img => ({
+                url: img.url,
+                position: img.position,
+              }))
+            },
+            variations: {
+              create: item.variations.map(variation => ({
+                name: variation.name,
+                textureType: variation.textureType,
+                color: variation.color || null,
+                colorCode: variation.colorCode || null,
+                textureImageUrl: variation.textureImageUrl || null,
+                associatedImageIds: variation.associatedImageIds ? JSON.stringify(variation.associatedImageIds) : null,
+                inStock: variation.inStock
+              }))
+            }
+          }
+        });
+        
+        createdCount++;
+      }
+    } catch (error) {
+      console.error(`❌ Error processing "${item.name}":`, error);
+      skippedCount++;
+    }
+  }
+
+  console.log(`✅ Living import: ${createdCount} created, ${updatedCount} updated, ${skippedCount} skipped`);
+}
+
 async function updateProducers() {
-  console.log('\n🔄 Step 4: Updating producers for existing furniture...');
+  console.log('\n🔄 Step 5: Updating producers for existing furniture...');
   
   const furnitureWithoutProducer = await prisma.furniture.findMany({
     where: {
