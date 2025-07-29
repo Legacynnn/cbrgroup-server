@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
-import { CreateCategoryDto, UpdateCategoryDto, UpdateCategoryImageDto } from './dto/category.dto';
+import { CreateCategoryDto, UpdateCategoryDto, UpdateCategoryImageDto, MergeCategoriesDto } from './dto/category.dto';
 
 @Injectable()
 export class CategoryService {
@@ -122,5 +122,40 @@ export class CategoryService {
     return this.prisma.category.delete({
       where: { id }
     });
+  }
+
+  async mergeCategories(mergeCategoriesDto: MergeCategoriesDto) {
+    const { primaryCategoryId, secondaryCategoryId } = mergeCategoriesDto;
+
+    if (primaryCategoryId === secondaryCategoryId) {
+      throw new BadRequestException('Primary and secondary categories cannot be the same');
+    }
+
+    const primaryCategory = await this.findOne(primaryCategoryId);
+    const secondaryCategory = await this.findOne(secondaryCategoryId);
+
+    const furnitureCount = await this.prisma.furniture.count({
+      where: { categoryId: secondaryCategoryId }
+    });
+
+    await this.prisma.$transaction(async (prisma) => {
+      if (furnitureCount > 0) {
+        await prisma.furniture.updateMany({
+          where: { categoryId: secondaryCategoryId },
+          data: { categoryId: primaryCategoryId }
+        });
+      }
+
+      await prisma.category.delete({
+        where: { id: secondaryCategoryId }
+      });
+    });
+
+    return {
+      message: `Successfully merged category "${secondaryCategory.name}" into "${primaryCategory.name}"`,
+      movedFurnitureCount: furnitureCount,
+      primaryCategory: primaryCategory,
+      deletedCategory: secondaryCategory
+    };
   }
 } 

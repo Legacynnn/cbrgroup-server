@@ -19,7 +19,7 @@ import { diskStorage } from 'multer';
 import { v4 as uuid } from 'uuid';
 import { extname } from 'path';
 import { CategoryService } from './category.service';
-import { CreateCategoryDto, UpdateCategoryDto, UpdateCategoryImageDto } from './dto/category.dto';
+import { CreateCategoryDto, UpdateCategoryDto, UpdateCategoryImageDto, MergeCategoriesDto } from './dto/category.dto';
 import { JwtAuthGuard } from '../auth/auth.guard';
 
 @Controller('categories')
@@ -113,5 +113,11 @@ export class CategoryController {
   @UseGuards(JwtAuthGuard)
   remove(@Param('id') id: string) {
     return this.categoryService.remove(id);
+  }
+
+  @Post('merge')
+  @UseGuards(JwtAuthGuard)
+  mergeCategories(@Body() mergeCategoriesDto: MergeCategoriesDto) {
+    return this.categoryService.mergeCategories(mergeCategoriesDto);
   }
 } 

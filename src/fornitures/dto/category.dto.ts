@@ -11,4 +11,9 @@ export class UpdateCategoryDto {
 
 export class UpdateCategoryImageDto {
   imageUrl: string;
+}
+
+export class MergeCategoriesDto {
+  primaryCategoryId: string;
+  secondaryCategoryId: string;
 } 
