@@ -77,9 +77,13 @@ export class CategoryService {
   }
 
   async updateImage(id: string, updateCategoryImageDto: UpdateCategoryImageDto) {
+    console.log('=== Category Service: updateImage ===');
+    console.log('Category ID:', id);
+    console.log('Update data:', updateCategoryImageDto);
+    
     await this.findOne(id);
     
-    return this.prisma.category.update({
+    const updatedCategory = await this.prisma.category.update({
       where: { id },
       data: {
         imageUrl: updateCategoryImageDto.imageUrl
@@ -90,6 +94,11 @@ export class CategoryService {
         }
       }
     });
+    
+    console.log('Updated category result:', updatedCategory);
+    console.log('=== Category Service: updateImage Complete ===');
+    
+    return updatedCategory;
   }
 
   async updateFeatured(id: string, featured: boolean) {

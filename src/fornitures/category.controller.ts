@@ -94,12 +94,23 @@ export class CategoryController {
     file: Express.Multer.File,
   ) {
     try {
+      console.log('=== Category Image Upload ===');
+      console.log('Category ID:', id);
+      console.log('File:', file.originalname, file.filename, file.size, file.mimetype);
+      
       await this.categoryService.findOne(id);
 
-      const baseUrl = process.env.API_URL;
+      const baseUrl = process.env.API_URL || `http://localhost:${process.env.PORT || 3333}`;
       const imageUrl = `${baseUrl}/uploads/${file.filename}`;
       
-      return this.categoryService.updateImage(id, { imageUrl });
+      console.log('Base URL:', baseUrl);
+      console.log('Image URL:', imageUrl);
+      
+      const updatedCategory = await this.categoryService.updateImage(id, { imageUrl });
+      console.log('Updated category:', updatedCategory);
+      console.log('=== Category Image Upload Complete ===');
+      
+      return updatedCategory;
     } catch (error) {
       console.error('Error uploading category image:', error);
       throw new HttpException(

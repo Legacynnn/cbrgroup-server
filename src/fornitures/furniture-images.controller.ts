@@ -61,7 +61,7 @@ export class FurnitureImagesController {
     try {
       await this.furnitureService.findOne(furnitureId);
 
-      const baseUrl = process.env.API_URL
+      const baseUrl = process.env.API_URL || `http://localhost:${process.env.PORT || 3333}`
       
       const existingFurniture = await this.furnitureService.findOne(furnitureId);
       const lastPosition = existingFurniture.images.length > 0 
@@ -212,7 +212,7 @@ export class FurnitureImagesController {
   ) {
     try {
       const file = files[0];
-      const baseUrl = process.env.API_URL;
+      const baseUrl = process.env.API_URL || `http://localhost:${process.env.PORT || 3333}`;
       const textureUrl = `${baseUrl}/uploads/${file.filename}`;
       
       return {
