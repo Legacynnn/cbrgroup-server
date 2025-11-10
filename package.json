@@ -8,6 +8,9 @@
   "scripts": {
     "build": "nest build",
     "heroku-postbuild": "yarn install --check-files && yarn prisma:generate && yarn prisma:migrate",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "start": "node dist/src/main",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "db:seed": "tsx prisma/seed.ts",
     "db:seed-prod": "npx prisma migrate deploy && tsx prisma/seed.ts",
@@ -17,7 +20,6 @@
     "db:seed-living": "tsx prisma/seed-living.ts",
     "db:update-producers": "tsx scripts/update-producers.ts",
     "db:update-producers-prod": "node scripts/update-producers.js",
-    "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
