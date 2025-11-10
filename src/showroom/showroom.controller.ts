@@ -17,7 +17,7 @@ import {
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { v4 as uuid } from 'uuid';
-import { extname } from 'path';
+import { extname, join } from 'path';
 import { JwtAuthGuard } from '../auth/auth.guard';
 import { ShowroomService } from './showroom.service';
 import { CreateShowroomImageDto, UpdateShowroomImageDto } from './dto/showroom.dto';
@@ -31,7 +31,7 @@ export class ShowroomController {
   @UseInterceptors(
     FilesInterceptor('images', 10, {
       storage: diskStorage({
-        destination: './uploads',
+        destination: join(process.cwd(), 'uploads'),
         filename: (req, file, callback) => {
           const uniqueName = uuid();
           const ext = extname(file.originalname);
@@ -61,19 +61,25 @@ export class ShowroomController {
     @Body() body: { title?: string; description?: string },
   ) {
     try {
-      const baseUrl = process.env.API_URL || `http://localhost:${process.env.PORT || 3333}`;
+      const baseUrl = process.env.API_URL || 
+        (process.env.NODE_ENV === 'production' 
+          ? 'https://cbrdesigngroup.com'
+          : `http://localhost:${process.env.PORT || 3333}`);
       
       const existingImages = await this.showroomService.findAll();
       const lastPosition = existingImages.length > 0 
         ? Math.max(...existingImages.map(img => img.position)) 
         : -1;
       
-      const imagesToCreate = files.map((file, index) => ({
-        url: `${baseUrl}/uploads/${file.filename}`,
-        position: lastPosition + 1 + index,
-        title: body.title || undefined,
-        description: body.description || undefined,
-      }));
+      const imagesToCreate = files.map((file, index) => {
+        const url = `${baseUrl}/uploads/${file.filename}`;
+        return {
+          url,
+          position: lastPosition + 1 + index,
+          title: body.title || undefined,
+          description: body.description || undefined,
+        };
+      });
       
       return this.showroomService.createImages(imagesToCreate);
     } catch (error) {

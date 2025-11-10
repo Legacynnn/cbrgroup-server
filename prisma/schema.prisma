@@ -11,25 +11,25 @@ datasource db {
 }
 
 model Category {
-  id        String      @id @default(uuid())
-  name      String      @unique
-  imageUrl  String?     // Optional image URL for the category
-  featured  Boolean     @default(false)
-  createdAt DateTime    @default(now())
-  updatedAt DateTime    @updatedAt
-  
+  id        String   @id @default(uuid())
+  name      String   @unique
+  imageUrl  String? // Optional image URL for the category
+  featured  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
   // Relationship to furniture
   furniture Furniture[]
 }
 
 model ShowroomImage {
-  id          String    @id @default(uuid())
+  id          String   @id @default(uuid())
   url         String
-  position    Int       @default(0)
+  position    Int      @default(0)
   title       String?
   description String?
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 
   @@map("showroom_images")
 }
@@ -45,23 +45,23 @@ model FurnitureImage {
 }
 
 model Furniture {
-  id                    String             @id @default(uuid())
-  name                  String
-  size                  Json?              
-  description           String?            
-  producer              String?            
-  price                 Decimal?           
-  featured              Boolean            @default(false)
-  promotionPrice        Decimal?           
-  isPromotionActive     Boolean            @default(false)
-  promotionExpiresAt    DateTime?          
-  inStock               Boolean            @default(true)
-  categoryId            String             // Foreign key to Category
-  category              Category           @relation(fields: [categoryId], references: [id], onDelete: Restrict)
-  createdAt             DateTime           @default(now())
-  updatedAt             DateTime           @updatedAt
-  variations            FurnitureVariation[]
-  images                FurnitureImage[]   
+  id                 String               @id @default(uuid())
+  name               String
+  size               Json?
+  description        String?
+  producer           String?
+  price              Decimal?
+  featured           Boolean              @default(false)
+  promotionPrice     Decimal?
+  isPromotionActive  Boolean              @default(false)
+  promotionExpiresAt DateTime?
+  inStock            Boolean              @default(true)
+  categoryId         String // Foreign key to Category
+  category           Category             @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  variations         FurnitureVariation[]
+  images             FurnitureImage[]
 
   @@index([categoryId])
   @@index([featured])
@@ -70,19 +70,19 @@ model Furniture {
 }
 
 model FurnitureVariation {
-  id                   String   @id @default(uuid())
-  name                 String   
-  textureType          String   
-  color                String?  
-  colorCode            String?  
-  textureImageUrl      String?  
-  associatedImageIds   Json?    
-  inStock              Boolean  @default(true)
-  createdAt            DateTime @default(now())
-  updatedAt            DateTime @updatedAt
-  
-  furniture     Furniture @relation(fields: [furnitureId], references: [id], onDelete: Cascade)
-  furnitureId   String
+  id                 String   @id @default(uuid())
+  name               String
+  textureType        String
+  color              String?
+  colorCode          String?
+  textureImageUrl    String?
+  associatedImageIds Json?
+  inStock            Boolean  @default(true)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  furniture   Furniture @relation(fields: [furnitureId], references: [id], onDelete: Cascade)
+  furnitureId String
 
   @@index([furnitureId])
 }
@@ -97,22 +97,22 @@ enum QuoteStatus {
 }
 
 model Quote {
-  id           String      @id @default(uuid())
-  customerName String
+  id            String      @id @default(uuid())
+  customerName  String
   customerEmail String
   customerPhone String
-  postcode     String
-  address      String
-  message      String?
-  status       QuoteStatus @default(OPEN)
-  boardPosition Int        @default(0) // For drag-n-drop board ordering
-  totalItems   Int         @default(0)
-  adminNotes   String?     // Internal notes for admin
-  createdAt    DateTime    @default(now())
-  updatedAt    DateTime    @updatedAt
-  
-  items        QuoteItem[]
-  history      QuoteHistory[]
+  postcode      String
+  address       String
+  message       String?
+  status        QuoteStatus @default(OPEN)
+  boardPosition Int         @default(0) // For drag-n-drop board ordering
+  totalItems    Int         @default(0)
+  adminNotes    String? // Internal notes for admin
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  items   QuoteItem[]
+  history QuoteHistory[]
 
   @@index([status])
   @@index([boardPosition])
@@ -120,20 +120,20 @@ model Quote {
 }
 
 model QuoteItem {
-  id           String   @id @default(uuid())
-  furnitureId  String
-  furnitureName String  // Store name at time of quote
-  category     String   // Store category at time of quote
-  size         String?  // Store size at time of quote
-  color        String?  // Store color variation if selected
-  colorCode    String?  // Store color code if selected
-  variationId  String?  // Reference to specific variation
-  imageUrl     String?  // Store image URL at time of quote
-  quantity     Int      @default(1)
-  createdAt    DateTime @default(now())
-  
-  quote        Quote    @relation(fields: [quoteId], references: [id], onDelete: Cascade)
-  quoteId      String
+  id            String   @id @default(uuid())
+  furnitureId   String
+  furnitureName String // Store name at time of quote
+  category      String // Store category at time of quote
+  size          String? // Store size at time of quote
+  color         String? // Store color variation if selected
+  colorCode     String? // Store color code if selected
+  variationId   String? // Reference to specific variation
+  imageUrl      String? // Store image URL at time of quote
+  quantity      Int      @default(1)
+  createdAt     DateTime @default(now())
+
+  quote   Quote  @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+  quoteId String
 
   @@index([quoteId])
   @@index([furnitureId])
@@ -151,15 +151,81 @@ enum QuoteHistoryAction {
 model QuoteHistory {
   id          String             @id @default(uuid())
   action      QuoteHistoryAction
-  description String             // Human-readable description of what changed
-  oldValue    Json?              // Previous value (for tracking changes)
-  newValue    Json?              // New value (for tracking changes)
-  performedBy String?            // Who made the change (admin user ID or 'system')
+  description String // Human-readable description of what changed
+  oldValue    Json? // Previous value (for tracking changes)
+  newValue    Json? // New value (for tracking changes)
+  performedBy String? // Who made the change (admin user ID or 'system')
   createdAt   DateTime           @default(now())
-  
-  quote       Quote              @relation(fields: [quoteId], references: [id], onDelete: Cascade)
-  quoteId     String
+
+  quote   Quote  @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+  quoteId String
 
   @@index([quoteId])
   @@index([createdAt])
+}
+
+model Brand {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  coverUrl    String
+  logoUrl     String?
+  websiteUrl  String?
+  description String?
+  deals       String[] // Array of strings representing what the brand sells
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([name])
+}
+
+enum ContactTicketStatus {
+  NEW
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+model ContactTicket {
+  id          String                @id @default(uuid())
+  name        String
+  email       String
+  phone       String
+  message     String
+  status      ContactTicketStatus   @default(NEW)
+  boardPosition Int                 @default(0)
+  adminNotes  String?
+  createdAt   DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+
+  history     ContactTicketHistory[]
+
+  @@index([status])
+  @@index([boardPosition])
+  @@index([createdAt])
+  @@map("contact_tickets")
+}
+
+enum ContactTicketHistoryAction {
+  CREATED
+  STATUS_CHANGED
+  POSITION_CHANGED
+  ADMIN_NOTES_UPDATED
+  CUSTOMER_INFO_UPDATED
+}
+
+model ContactTicketHistory {
+  id          String                      @id @default(uuid())
+  action      ContactTicketHistoryAction
+  description String
+  oldValue    Json?
+  newValue    Json?
+  performedBy String?
+  createdAt   DateTime                    @default(now())
+
+  ticket   ContactTicket  @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  ticketId String
+
+  @@index([ticketId])
+  @@index([createdAt])
+  @@map("contact_ticket_history")
 }

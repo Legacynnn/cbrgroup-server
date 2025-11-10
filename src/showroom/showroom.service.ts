@@ -71,11 +71,15 @@ export class ShowroomService {
     const image = await this.findOne(id);
 
     try {
-      const filename = image.url.split('/').pop();
+      const urlParts = image.url.split('/');
+      const filename = urlParts[urlParts.length - 1];
+      
       if (filename) {
         const filePath = join(process.cwd(), 'uploads', filename);
         if (existsSync(filePath)) {
           unlinkSync(filePath);
+        } else {
+          console.warn(`File not found at path: ${filePath}`);
         }
       }
     } catch (error) {
